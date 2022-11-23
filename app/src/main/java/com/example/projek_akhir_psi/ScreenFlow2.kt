@@ -5,21 +5,19 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 
-class MainActivity : AppCompatActivity() {
+class ScreenFlow2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_screen_flow2)
 
         supportActionBar?.hide()
 
-        val btnNext = findViewById<Button>(R.id.btnNext)
+        val btnMulai = findViewById<Button>(R.id.btnMulai)
 
-        btnNext.setOnClickListener {
-            val intent = Intent(this,ScreenFlow2::class.java)
+        btnMulai.setOnClickListener {
+            val intent = Intent(this,HomePage::class.java)
             startActivity(intent)
             finish()
         }
-
-
     }
 }

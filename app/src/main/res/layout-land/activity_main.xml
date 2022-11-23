@@ -15,9 +15,9 @@
         <ImageView
             android:id="@+id/ivBackground"
             android:layout_width="match_parent"
-            android:layout_height="1700dp"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:scaleType="fitCenter"
+            android:scaleType="centerCrop"
             android:src="@drawable/unsplash_amg" />
     </LinearLayout>
 
