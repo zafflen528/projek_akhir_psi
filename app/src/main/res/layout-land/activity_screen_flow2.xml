@@ -15,27 +15,29 @@
         <ImageView
             android:id="@+id/ivBackground"
             android:layout_width="match_parent"
-            android:layout_height="1700dp"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:scaleType="fitCenter"
-            android:src="@drawable/unsplash_amg" />
+            android:scaleType="centerCrop"
+            android:src="@drawable/unsplash_aq" />
     </LinearLayout>
 
-        <ImageView
-            android:id="@+id/ivLogo"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            app:layout_constraintTop_toTopOf="parent"
-            android:src="@drawable/kallos_logo_white"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            />
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/kallos_logo_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 
     <TextView
         android:id="@+id/tvJudulSC1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Kini olahraga di rumah jadi lebih mudah"
+        android:text="Mulai jadikan olahraga
+sebagai rutinitasmu"
         android:textColor="@color/white"
         android:fontFamily="@font/popping_bold"
         android:textSize="12pt"
@@ -50,29 +52,32 @@
         android:id="@+id/tvSubJudulSC1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Berolahraga di rumah tanpa harus membeli alat"
+        android:text="Tingkatkan energi dan kesehatanmu"
         android:textColor="@color/white"
         android:fontFamily="@font/regular_poppins"
         android:textSize="6pt"
         android:layout_marginBottom="150dp"
+        android:layout_marginHorizontal="35dp"
         app:layout_constraintTop_toBottomOf="@id/tvJudulSC1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginHorizontal="35dp"
         />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnNext"
-        android:paddingLeft="15dp"
-        android:layout_marginRight="30dp"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:id="@+id/btnMulai"
+        android:textColor="@color/white"
+        android:fontFamily="@font/semi_bold_poppins"
+        android:textAllCaps="false"
+        android:text="Mulai"
+        android:textSize="16dp"
         android:layout_marginBottom="45dp"
-        android:drawableLeft="@drawable/majesticons_arrow_right_line"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="30dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:gravity="center_horizontal"
-        android:background="@drawable/orange_round"/>
+        android:background="@drawable/rounded_orange_button"/>
 
 
 
