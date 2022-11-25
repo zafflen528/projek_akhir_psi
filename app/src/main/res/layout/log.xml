@@ -3,14 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_margin="36dp"
+    >
 
     <TextView
         android:id="@+id/tvLogTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="-100dp"
         android:fontFamily="@font/popping_bold"
         android:text="log_title"
+        android:textAlignment="center"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/tvLogDate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -21,8 +26,10 @@
         android:id="@+id/tvLogDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="-100dp"
         android:fontFamily="@font/regular_poppins"
         android:text="log_date"
+        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -39,6 +46,107 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvLogDate">
+
+        <TextView
+            android:id="@+id/tvDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/popping_bold"
+            android:text="Detail"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="5dp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvNameTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/regular_poppins"
+            android:text="Nama Gerakan"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvDetail" />
+
+        <TextView
+            android:id="@+id/tvNameContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/popping_bold"
+            android:text="nama_gerakan"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameTitle" />
+
+        <TextView
+            android:id="@+id/tvRepsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jumlah Repetisi"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="16sp"
+            android:layout_margin="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameContent" />
+
+        <TextView
+            android:id="@+id/tvRepsContent"
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/popping_bold"
+            android:text="n kali"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRepsTitle" />
+
+        <TextView
+            android:id="@+id/tvSetTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/regular_poppins"
+            android:text="Jumlah Set"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvRepsContent" />
+
+        <TextView
+            android:id="@+id/tvSetContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="n kali"
+            android:textSize="18sp"
+            android:fontFamily="@font/popping_bold"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvSetTitle" />
+
+        <TextView
+            android:id="@+id/tvTotalTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/regular_poppins"
+            android:text="Total Repetisi"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvSetContent" />
+
+        <TextView
+            android:id="@+id/tvTotalContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/popping_bold"
+            android:text="n kali"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvTotalTitle" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
