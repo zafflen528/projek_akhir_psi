@@ -36,4 +36,3 @@ class ListJenisLatihanAdapter(private val listLatihan: ArrayList<JenisLatihan>):
     }
     override fun getItemCount(): Int = listLatihan.size
     // comment
-}
