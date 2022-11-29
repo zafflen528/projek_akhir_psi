@@ -119,146 +119,15 @@
         app:layout_constraintTop_toBottomOf="@+id/layout1"
         app:layout_constraintStart_toStartOf="@+id/tvSambutan"/>
 
-    <LinearLayout
-        android:id="@+id/layoutJenisLatihan"
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_jenis_latihan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingStart="24dp"
-        android:paddingEnd="24dp"
-        app:layout_constraintTop_toBottomOf="@+id/tvJenisLatihan">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/layoutLatihanDada"
-            android:layout_width="match_parent"
-            android:layout_height="110dp"
-            android:background="@drawable/rounded_corner_8dp"
-            android:backgroundTint="@color/light_orange">
-
-            <TextView
-                android:id="@+id/tvLatihanDada"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginBottom="24dp"
-                android:text="Latihan Dada"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/layoutLatihanDada"
-                app:layout_constraintStart_toStartOf="@+id/layoutLatihanDada"></TextView>
-
-            <ImageView
-                android:id="@+id/ivLatihanDada"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:src="@drawable/orange_circle_mainmenu"
-                android:layout_marginTop="-8dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@drawable/gambar_latihan_dada"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginEnd="32dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@id/ivLatihanDada"
-                />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/layoutLatihanBisep"
-            android:layout_width="match_parent"
-            android:layout_height="110dp"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/rounded_corner_8dp"
-            android:backgroundTint="@color/light_orange">
-
-            <TextView
-                android:id="@+id/tvLatihanBisep"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginBottom="24dp"
-                android:text="Latihan Bisep"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/layoutLatihanBisep"
-                app:layout_constraintStart_toStartOf="@+id/layoutLatihanBisep"></TextView>
-
-            <ImageView
-                android:id="@+id/ivLatihanBisep"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:src="@drawable/orange_circle_mainmenu"
-                android:layout_marginTop="-8dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                />
-
-
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@drawable/gambar_latihan_bisep"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginStart="-40dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@id/ivLatihanBisep"
-                />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/layoutLatihanKaki"
-            android:layout_width="match_parent"
-            android:layout_height="110dp"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/rounded_corner_8dp"
-            android:backgroundTint="@color/light_orange">
-
-            <TextView
-                android:id="@+id/tvLatihanKaki"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginBottom="24dp"
-                android:text="Latihan Kaki"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/layoutLatihanKaki"
-                app:layout_constraintStart_toStartOf="@+id/layoutLatihanKaki"></TextView>
-
-            <ImageView
-                android:id="@+id/ivLatihanKaki"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:src="@drawable/orange_circle_mainmenu"
-                android:layout_marginTop="-8dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                />
-
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@drawable/gambar_latihan_kaki_"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@id/ivLatihanKaki"
-                />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </LinearLayout>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvJenisLatihan"
+        tools:listitem="@layout/layout_latihan" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
