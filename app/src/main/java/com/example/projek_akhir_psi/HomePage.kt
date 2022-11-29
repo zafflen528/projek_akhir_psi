@@ -9,13 +9,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class HomePage : AppCompatActivity() {
-    fun goToLog() {
+    private fun goToLog() {
         val logBox:View = findViewById(R.id.layoutPencatatan)
         logBox.setOnClickListener{
-            Toast.makeText(this, "logbox",Toast.LENGTH_SHORT).show()
+//            Toast.makeText(this, "logbox",Toast.LENGTH_SHORT).show()
             val intent = Intent(this, WorkoutLogActivity::class.java)
             startActivity(intent)
-            finish()
         }
     }
     override fun onCreate(savedInstanceState: Bundle?) {
