@@ -12,7 +12,7 @@ import com.bumptech.glide.Glide
 class ListJenisLatihanAdapter(private val listLatihan: ArrayList<JenisLatihan>):
     RecyclerView.Adapter<ListJenisLatihanAdapter.ListViewHolder>() {
         inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-            var imgPhoto: ImageView = itemView.findViewById(R.id.imageLatihanRV)
+            var imgPhoto: ImageView = itemView.findViewById(R.id.ivLatihanRV)
             var tvNamaLatihan: TextView = itemView.findViewById(R.id.tvJenisLatihanRV)
 
             fun bind(jenis_latihan: JenisLatihan) {
@@ -36,3 +36,4 @@ class ListJenisLatihanAdapter(private val listLatihan: ArrayList<JenisLatihan>):
     }
     override fun getItemCount(): Int = listLatihan.size
     // comment
+}
