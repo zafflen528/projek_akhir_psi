@@ -1,134 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomePage">
 
-    <TextView
-        android:id="@+id/tvSambutan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:text="Selamat Berolahraga"
-        android:textColor="@color/black"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-
-        />
-
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layout1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        app:layout_constraintTop_toBottomOf="@id/tvSambutan">
+        android:layout_height="wrap_content">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/layoutPencatatan"
-            android:layout_width="175dp"
-            android:layout_height="125dp"
-            android:background="@drawable/rounded_corner_8dp"
-            android:backgroundTint="@color/orange"
-            android:layout_margin="8dp"
+        <TextView
+            android:id="@+id/tvSambutan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:text="Selamat Berolahraga"
+            android:fontFamily="@font/semi_bold_poppins"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
 
-            <TextView
-                android:id="@+id/tvPencatatan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginBottom="16dp"
-                android:text="Pencatatan"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/layoutPencatatan"
-                app:layout_constraintStart_toStartOf="@+id/layoutPencatatan">
+            />
 
-            </TextView>
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:gravity="center"
+            android:columnCount="2"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/tvSambutan">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:src="@drawable/pencatatan_icon"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_weight="1"
+                android:id="@+id/layoutPencatatan"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:background="@drawable/rounded_corner_8dp"
+                android:backgroundTint="@color/orange"
+                android:layout_margin="8dp"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/tvPencatatan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Pencatatan"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/semi_bold_poppins"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/layoutPencatatan"
+                    app:layout_constraintStart_toStartOf="@+id/layoutPencatatan">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/layoutArtikel"
-            android:layout_width="175dp"
-            android:layout_height="125dp"
-            android:background="@drawable/rounded_corner_8dp"
-            android:backgroundTint="@color/orange"
-            android:layout_margin="8dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
+                </TextView>
 
-            <TextView
-                android:id="@+id/tvArtikel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginBottom="16dp"
-                android:text="Artikel"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/layoutArtikel"
-                app:layout_constraintStart_toStartOf="@+id/layoutArtikel">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/pencatatan_icon"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
 
-            </TextView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/artikel_icon"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_weight="1"
+                android:id="@+id/layoutArtikel"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:background="@drawable/rounded_corner_8dp"
+                android:backgroundTint="@color/orange"
+                android:layout_margin="8dp"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/tvArtikel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Artikel"
+                    android:fontFamily="@font/semi_bold_poppins"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/layoutArtikel"
+                    app:layout_constraintStart_toStartOf="@+id/layoutArtikel">
+
+                </TextView>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/artikel_icon"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvJenisLatihan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Latih Bagian Tubuhmu"
+            android:fontFamily="@font/semi_bold_poppins"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/layout1"
+            app:layout_constraintStart_toStartOf="@+id/tvSambutan"/>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="15dp"
+            android:layout_marginHorizontal="20dp"
+            android:id="@+id/rv_jenis_latihan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvJenisLatihan"
+            tools:listitem="@layout/layout_latihan" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-    <TextView
-        android:id="@+id/tvJenisLatihan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Latih Bagian Tubuhmu"
-        android:textColor="@color/black"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/layout1"
-        app:layout_constraintStart_toStartOf="@+id/tvSambutan"/>
 
-
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_marginHorizontal="20dp"
-        android:id="@+id/rv_jenis_latihan"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvJenisLatihan"
-        tools:listitem="@layout/layout_latihan" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
