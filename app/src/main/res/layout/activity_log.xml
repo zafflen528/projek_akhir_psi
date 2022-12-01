@@ -8,7 +8,7 @@
     >
 
     <TextView
-        android:id="@+id/tvLogTitle"
+        android:id="@+id/tvInnerLogTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="-100dp"
@@ -16,14 +16,14 @@
         android:text="log_title"
         android:textAlignment="center"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/tvLogDate"
+        app:layout_constraintBottom_toTopOf="@+id/tvInnerLogDate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvLogDate"
+        android:id="@+id/tvInnerLogDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="-100dp"
@@ -34,7 +34,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvLogTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/tvInnerLogTitle" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -45,7 +45,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvLogDate">
+        app:layout_constraintTop_toBottomOf="@+id/tvInnerLogDate">
 
         <TextView
             android:id="@+id/tvDetail"
