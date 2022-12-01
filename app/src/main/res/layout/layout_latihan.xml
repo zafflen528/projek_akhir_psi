@@ -25,6 +25,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginBottom="24dp"
                 android:text="Latihan Dada"
+                android:fontFamily="@font/semi_bold_poppins"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -37,6 +38,7 @@
                 android:layout_height="300dp"
                 android:src="@drawable/orange_circle_mainmenu"
                 android:layout_marginTop="-8dp"
+                android:layout_marginRight="-40dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 />
