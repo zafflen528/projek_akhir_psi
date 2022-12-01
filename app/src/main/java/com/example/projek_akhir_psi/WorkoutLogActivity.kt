@@ -15,7 +15,6 @@ class WorkoutLogActivity : AppCompatActivity() {
             logList.add(log)
         }
 
-        fun getLog() = logList
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,7 +28,7 @@ class WorkoutLogActivity : AppCompatActivity() {
         }
 
         val rvWorkoutLog: RecyclerView = findViewById(R.id.recyclerView)
-        val workoutLogAdapter: WorkoutLogAdapter = WorkoutLogAdapter(logList)
+        val workoutLogAdapter = WorkoutLogAdapter(logList)
         rvWorkoutLog.adapter = workoutLogAdapter
         rvWorkoutLog.layoutManager = LinearLayoutManager(this)
     }

@@ -7,5 +7,5 @@ data class WorkoutLog(
     var exerciseName:String,
     var sets: Int,
     var reps: Int,
-    var date: Date,
+    var date: String,
 )
