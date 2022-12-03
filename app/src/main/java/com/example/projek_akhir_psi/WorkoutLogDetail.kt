@@ -22,7 +22,7 @@ class WorkoutLogDetail : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_log)
-
+        supportActionBar?.hide()
         val tvTitle: TextView = findViewById(R.id.tvInnerLogTitle)
         val tvDate: TextView = findViewById(R.id.tvInnerLogDate)
         val tvNameContent:TextView = findViewById(R.id.tvNameContent)
