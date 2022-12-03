@@ -49,8 +49,8 @@ class AddLogActivity : AppCompatActivity() {
             addToList()
             clearContents()
 //            val intent = Intent(this, WorkoutLogActivity::class.java)
-//            finish()
 //            startActivity(intent)
+//            finish()
         }
     }
 }

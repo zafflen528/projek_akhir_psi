@@ -10,7 +10,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Recycler
 
-class WorkoutLogAdapter(private val listWorkoutLog : MutableList<WorkoutLog>):
+class WorkoutLogAdapter(private var listWorkoutLog : MutableList<WorkoutLog>):
     RecyclerView.Adapter<WorkoutLogAdapter.ListViewHolder>() {
         inner class ListViewHolder(logView: View) : RecyclerView.ViewHolder(logView) {
             val tvTitle:TextView = logView.findViewById(R.id.tvLogTitle)
@@ -18,6 +18,7 @@ class WorkoutLogAdapter(private val listWorkoutLog : MutableList<WorkoutLog>):
             val constraintLayout: ConstraintLayout = logView.findViewById(R.id.logItemConstraint)
 
             val ctx = logView.context
+
             fun bind(workoutLog: WorkoutLog) {
                 tvTitle.text = workoutLog.workoutName
                 tvDate.text = workoutLog.date
@@ -34,6 +35,11 @@ class WorkoutLogAdapter(private val listWorkoutLog : MutableList<WorkoutLog>):
                 }
             }
         }
+
+    fun setFilteredList(list : ArrayList<WorkoutLog>) {
+        listWorkoutLog = list
+        notifyDataSetChanged()
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
         val view = LayoutInflater.from(parent.context)
