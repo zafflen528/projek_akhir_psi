@@ -17,6 +17,14 @@ class HomePage : AppCompatActivity() {
             startActivity(intent)
         }
     }
+    private fun goToArtikel() {
+        val artikelBox:View = findViewById(R.id.layoutArtikel)
+        artikelBox.setOnClickListener{
+            Toast.makeText(this,"artikel", Toast.LENGTH_SHORT)
+            val intent = Intent(this, ArtikelActivity::class.java)
+            startActivity(intent)
+        }
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_page)
@@ -34,5 +42,6 @@ class HomePage : AppCompatActivity() {
         rvJenisLatihan.layoutManager = LinearLayoutManager(this)
 
         goToLog()
+        goToArtikel()
     }
 }
