@@ -10,7 +10,7 @@ import java.sql.Date
 
 class AddLogActivity : AppCompatActivity() {
 
-
+    lateinit var btnBack : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,6 +41,11 @@ class AddLogActivity : AppCompatActivity() {
             )
             WorkoutLogActivity.addLog(logOb)
             Toast.makeText(this, "Successfully added a workout log!", Toast.LENGTH_SHORT).show()
+        }
+
+        btnBack = findViewById(R.id.btnBack)
+        btnBack.setOnClickListener {
+            this.finish()
         }
 
         btnTambah.setOnClickListener {
