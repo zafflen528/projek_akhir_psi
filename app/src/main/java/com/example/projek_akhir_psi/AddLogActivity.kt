@@ -15,6 +15,7 @@ class AddLogActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_log)
+        supportActionBar?.hide()
         val btnTambah = findViewById<Button>(R.id.btnTambah)
         val etNamaLatihan = findViewById<EditText>(R.id.etNamaLatihan)
         val etDate = findViewById<EditText>(R.id.etDate)
@@ -48,9 +49,6 @@ class AddLogActivity : AppCompatActivity() {
             // Go back
             addToList()
             clearContents()
-//            val intent = Intent(this, WorkoutLogActivity::class.java)
-//            startActivity(intent)
-//            finish()
         }
     }
 }
