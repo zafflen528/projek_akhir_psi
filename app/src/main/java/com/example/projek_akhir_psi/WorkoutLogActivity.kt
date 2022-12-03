@@ -5,10 +5,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
+import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import java.util.*
+import kotlin.collections.ArrayList
 
 class WorkoutLogActivity : AppCompatActivity() {
+
+    lateinit var search : SearchView
+    lateinit var btnBack : Button
 
     companion object {
         private val logList = mutableListOf<WorkoutLog>()
@@ -73,6 +79,7 @@ class WorkoutLogActivity : AppCompatActivity() {
         setContentView(R.layout.activity_workout_log)
         supportActionBar?.hide()
         rvWorkoutLog = findViewById(R.id.recyclerView)
+        search = findViewById(R.id.search)
 
         val btnTambah: Button = findViewById(R.id.btnTambah)
         btnTambah.setOnClickListener {
@@ -85,7 +92,45 @@ class WorkoutLogActivity : AppCompatActivity() {
             false
         }
 
+        btnBack = findViewById(R.id.btnBack)
+        btnBack.setOnClickListener {
+            this.finish()
+        }
+
         rvWorkoutLog.adapter = workoutLogAdapter
         rvWorkoutLog.layoutManager = LinearLayoutManager(this)
+
+        search.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                filterQuery(newText)
+                return true
+            }
+
+        })
     }
+
+    private fun filterQuery(query : String?) {
+        if (query != null){
+            val filteredList = ArrayList<WorkoutLog>()
+            for (i in logList){
+                if (i.workoutName.lowercase(Locale.ROOT).contains(query)){
+                    filteredList.add(i)
+                }
+            }
+
+            if (filteredList.isEmpty()){
+                Toast.makeText(this, "Catatan tidak ditemukan,",Toast.LENGTH_SHORT).show()
+            }else{
+                workoutLogAdapter.setFilteredList(filteredList)
+            }
+        }
+
+
+    }
+
+
 }
