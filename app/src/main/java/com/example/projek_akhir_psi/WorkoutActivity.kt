@@ -24,7 +24,6 @@ class WorkoutActivity : AppCompatActivity() {
         val imgtahap = findViewById<ImageView>(R.id.imagetahap)
         val btnlanjut = findViewById<Button>(R.id.btn_lanjut)
         val btnkembali = findViewById<Button>(R.id.btn_kembali)
-        val buttonback = findViewById<Button>(R.id.button)
         val btnpanduan = findViewById<Button>(R.id.btn_panduan)
         val jenislatihan = intent.getParcelableExtra<JenisLatihan>(HomePage.INTENT_PARCELABLE)
 
@@ -68,9 +67,7 @@ class WorkoutActivity : AppCompatActivity() {
             update()
             btnkembali.isEnabled=true
         }
-        buttonback.setOnClickListener {
-            this.finish()
-        }
+
 
 
 //        val tvPanduan= findViewById<TextView>(R.id.btn_panduan)
@@ -87,6 +84,11 @@ class WorkoutActivity : AppCompatActivity() {
             intent.putExtra("index", count)
             intent.putExtra(HomePage.INTENT_PARCELABLE,jenislatihan)
             startActivity(intent)
+        }
+
+        var btnBack : Button= findViewById(R.id.btnBack)
+        btnBack.setOnClickListener {
+            this.finish()
         }
 
 

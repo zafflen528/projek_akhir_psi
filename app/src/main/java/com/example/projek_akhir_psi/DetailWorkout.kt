@@ -11,6 +11,7 @@ import android.widget.TextView
 
 class DetailWorkout : AppCompatActivity() {
 
+    lateinit var btnBack : Button
     companion object{
         val INTENT_PARCELABLE = "OBJECT_INTENT"
     }
@@ -40,6 +41,11 @@ class DetailWorkout : AppCompatActivity() {
             val intent = Intent(buttonlatihan.context,WorkoutActivity::class.java)
             intent.putExtra(HomePage.INTENT_PARCELABLE,jenislatihan)
             startActivity(intent)
+        }
+
+        btnBack = findViewById(R.id.btnBack)
+        btnBack.setOnClickListener {
+            this.finish()
         }
 
 
