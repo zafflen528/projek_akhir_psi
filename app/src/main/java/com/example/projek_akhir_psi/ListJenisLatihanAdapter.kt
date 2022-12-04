@@ -10,6 +10,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.projek_akhir_psi.HomePage.Companion.INTENT_PARCELABLE
 
 class ListJenisLatihanAdapter(private val listLatihan: ArrayList<JenisLatihan>):
     RecyclerView.Adapter<ListJenisLatihanAdapter.ListViewHolder>() {
@@ -26,9 +27,7 @@ class ListJenisLatihanAdapter(private val listLatihan: ArrayList<JenisLatihan>):
             }
             layoutForeground.setOnClickListener {
                 val intent = Intent(itemView.context,DetailWorkout::class.java)
-                intent.apply {
-                    putExtra(DetailWorkout.EXTRA_NAME,jenis_latihan.nama)
-                }
+                intent.putExtra(INTENT_PARCELABLE,jenis_latihan)
                 itemView.context.startActivity(intent)
             }
         }
