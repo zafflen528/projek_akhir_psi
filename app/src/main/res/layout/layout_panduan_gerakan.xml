@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="24dp"
+    tools:context=".DetailWorkout">
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/ivPanduanGerakan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/gambar_latihan_bisep"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        ></androidx.constraintlayout.utils.widget.ImageFilterView>
+    <TextView
+        android:id="@+id/tvNamaWorkoutPanduanGerakan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="ChestStrecth"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/ivPanduanGerakan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        ></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Langkah-Langkah"
+        android:textColor="@color/orange"
+        app:layout_constraintTop_toBottomOf="@+id/tvNamaWorkoutPanduanGerakan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        ></TextView>
+    <TextView
+        android:id="@+id/tvLangkahWorkout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Langkahnya"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvNamaWorkoutPanduanGerakan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        ></TextView>
+
+    <Button
+        android:id="@+id/btnTutupPanduan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tutup"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/tvLangkahWorkout"
+        android:background="@drawable/rounded_orange_button"
+
+        ></Button>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
