@@ -1,11 +1,18 @@
 package com.example.projek_akhir_psi
 
+import android.content.res.Resources
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.Settings.Global.getString
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class ArtikelActivity : AppCompatActivity() {
+
+    companion object{
+        val INTENT_PARCELABLE = "OBJECT_INTENT"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_artikel)
@@ -14,9 +21,10 @@ class ArtikelActivity : AppCompatActivity() {
 
         val listArtikel = ArrayList<Artikel>()
 
-        listArtikel.add(Artikel(resources.getIdentifier("artikelsatu","drawable",getPackageName()), "Latihan Dada"))
-        listArtikel.add(Artikel(resources.getIdentifier("gambar_latihan_dada","drawable",getPackageName()), "Latihan Bisep"))
-        listArtikel.add(Artikel(resources.getIdentifier("gambar_latihan_kaki_","drawable",getPackageName()), "Latihan Kaki"))
+        listArtikel.add(Artikel(resources.getIdentifier("artikelsatu","drawable",getPackageName()) , this.resources.getString(R.string.judul1),this.resources.getString(R.string.isi1)))
+        listArtikel.add(Artikel(resources.getIdentifier("artikelsatu","drawable",getPackageName()) , this.resources.getString(R.string.judul2),this.resources.getString(R.string.isi2)))
+        listArtikel.add(Artikel(resources.getIdentifier("artikelsatu","drawable",getPackageName()) , this.resources.getString(R.string.judul3),this.resources.getString(R.string.isi3)))
+
         val rvArtikel: RecyclerView =  findViewById(R.id.recyclerViewArtikel)
         val listArtikelAdapter = ListArtikelAdapter(listArtikel)
         rvArtikel.adapter = listArtikelAdapter

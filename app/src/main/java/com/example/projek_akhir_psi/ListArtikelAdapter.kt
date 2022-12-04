@@ -4,19 +4,21 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.projek_akhir_psi.ArtikelActivity.Companion.INTENT_PARCELABLE
 
 class ListArtikelAdapter(private val listArtikel: ArrayList<Artikel>):
     RecyclerView.Adapter<ListArtikelAdapter.ListViewHolder>() {
         inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
             val imgArtikel: ImageView = itemView.findViewById(R.id.img_artikel)
             val tvJudul: TextView = itemView.findViewById(R.id.tv_judul)
-            val btnBaca : LinearLayout = itemView.findViewById(R.id.btn_baca)
+            val btnBaca : Button = itemView.findViewById(R.id.btn_baca)
 
             fun bind(artikel: Artikel) {
                 with(itemView) {
@@ -24,13 +26,11 @@ class ListArtikelAdapter(private val listArtikel: ArrayList<Artikel>):
                         .into(imgArtikel)
                     tvJudul.text = artikel.judul
                 }
-//                btnBaca.setOnClickListener {
-//                    val intent = Intent(itemView.context,DetailWorkout::class.java)
-//                    intent.apply {
-//                        putExtra(DetailWorkout.EXTRA_NAME,jenis_latihan.nama)
-//                    }
-//                    itemView.context.startActivity(intent)
-//                }
+                btnBaca.setOnClickListener {
+                    val intent = Intent(btnBaca.context, ArtikelDetail::class.java)
+                    intent.putExtra(INTENT_PARCELABLE, artikel)
+                    btnBaca.context.startActivity(intent)
+                }
             }
         }
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ListViewHolder {

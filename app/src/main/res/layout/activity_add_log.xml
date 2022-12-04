@@ -45,8 +45,10 @@
         android:background="@color/grey"
         app:layout_constraintTop_toBottomOf="@id/top" />
 
-    <EditText
-        android:id="@+id/etNamaLatihan"
+
+
+    <TextView
+        android:id="@+id/judul"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -56,8 +58,27 @@
         app:layout_constraintTop_toBottomOf="@+id/top"
         tools:layout_editor_absoluteX="101dp" />
 
-    <EditText
-        android:id="@+id/etDate"
+        <EditText
+            android:id="@+id/etNamaLatihan"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:background="@drawable/edit_text_stroke"
+
+            android:fontFamily="@font/regular_poppins"
+            android:hint="Nama latihan"
+            android:inputType="textPersonName"
+            android:paddingHorizontal="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/etDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/judul" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -67,8 +88,8 @@
         app:layout_constraintTop_toBottomOf="@+id/etNamaLatihan"
         tools:layout_editor_absoluteX="101dp" />
 
-    <EditText
-        android:id="@+id/etNamaGerakan"
+    <LinearLayout
+        android:id="@+id/llNamaGerakan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -78,8 +99,35 @@
         app:layout_constraintTop_toBottomOf="@+id/etDate"
         tools:layout_editor_absoluteX="101dp" />
 
-    <EditText
-        android:id="@+id/etReps"
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+
+            android:fontFamily="@font/regular_poppins"
+            android:text="Nama Latihan" />
+
+        <EditText
+            android:background="@drawable/edit_text_stroke"
+            android:id="@+id/etNamaGerakan"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:paddingHorizontal="20dp"
+            android:fontFamily="@font/regular_poppins"
+            android:ems="10"
+            android:hint="Nama Gerakan"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toTopOf="@+id/etReps"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llDate" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llReps"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -89,8 +137,30 @@
         app:layout_constraintTop_toBottomOf="@+id/etNamaGerakan"
         tools:layout_editor_absoluteX="101dp" />
 
-    <EditText
-        android:id="@+id/etSets"
+
+            android:fontFamily="@font/regular_poppins"
+            android:text="Nama Latihan" />
+
+        <EditText
+            android:background="@drawable/edit_text_stroke"
+            android:id="@+id/etReps"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:ems="10"
+            android:fontFamily="@font/regular_poppins"
+            android:paddingHorizontal="20dp"
+            android:hint="Jumlah Repetisi"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/etSets"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llNamaGerakan" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llSets"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -99,6 +169,7 @@
         app:layout_constraintBottom_toTopOf="@+id/btnTambah"
         app:layout_constraintTop_toBottomOf="@+id/etReps"
         tools:layout_editor_absoluteX="101dp" />
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnTambah"

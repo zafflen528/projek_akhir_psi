@@ -1,8 +1,10 @@
 package com.example.projek_akhir_psi
 
+import android.content.ContentValues.TAG
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.widget.SearchView
@@ -12,6 +14,11 @@ import java.util.*
 import kotlin.collections.ArrayList
 import  io.reactivex.rxjava3.core.Observable
 import com.jakewharton.rxbinding4.widget.TextViewBeforeTextChangeEvent
+import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
+import io.reactivex.rxjava3.core.ObservableOnSubscribe
+import io.reactivex.rxjava3.core.Scheduler
+import io.reactivex.rxjava3.schedulers.Schedulers
+import java.util.concurrent.TimeUnit
 
 class WorkoutLogActivity : AppCompatActivity() {
 
@@ -66,17 +73,50 @@ class WorkoutLogActivity : AppCompatActivity() {
         rvWorkoutLog.adapter = workoutLogAdapter
         rvWorkoutLog.layoutManager = LinearLayoutManager(this)
 
-        search.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
-            override fun onQueryTextSubmit(query: String?): Boolean {
-                return false
-            }
+        Observable.create(ObservableOnSubscribe<String> { subscriber ->
+            search.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
+                override fun onQueryTextSubmit(query: String?): Boolean {
+                    subscriber.onNext(query!!)
+                    return false
+                }
 
-            override fun onQueryTextChange(newText: String?): Boolean {
-                filterQuery(newText)
-                return true
-            }
+                override fun onQueryTextChange(newText: String?): Boolean {
+                    subscriber.onNext(newText!!)
+                    return false
+                }
+
+            })
 
         })
+            .debounce(1000, TimeUnit.MILLISECONDS)
+            .distinctUntilChanged()
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe ({ text ->
+                Log.d("search", "subscriber: $text")
+                filterQuery(text)
+            },
+                {
+                    Log.e("search","Erorr : $it")
+                },
+                {
+                    Log.d("search","Complete")
+                }
+            )
+
+
+
+//        search.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
+//            override fun onQueryTextSubmit(query: String?): Boolean {
+//                return false
+//            }
+//
+//            override fun onQueryTextChange(newText: String?): Boolean {
+//                filterQuery(newText)
+//                return true
+//            }
+//
+//        })
     }
 
     private fun validateForm() {
