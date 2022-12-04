@@ -42,10 +42,15 @@ class HomePage : AppCompatActivity() {
         list.add(JenisLatihan(resources.getIdentifier("gambar_latihan_dada","drawable",getPackageName()),resources.getIdentifier("gambar_latihan_dada","drawable",getPackageName()), "Latihan Dada",this.resources.getString(R.string.isidada), listdada, 5))
         list.add(JenisLatihan(resources.getIdentifier("gambar_latihan_kaki_","drawable",getPackageName()),resources.getIdentifier("gambar_latihan_kaki_","drawable",getPackageName()), "Latihan Kaki",this.resources.getString(R.string.isikaki), listkaki, 5))
 
-        for (i in 0 until list.get(1).jumlahTahapan){
+        for (i in 0 until list.get(0).jumlahTahapan){
             list[0].tahapan.add(StepWorkout(this.resources.getStringArray(R.array.gerakan_bisep)[i], resources.getIdentifier(this.resources.getStringArray(R.array.gambar_bisep)[i],"drawable",getPackageName()), this.resources.getStringArray(R.array.repetisi_bisep)[i], this.resources.getStringArray(R.array.panduan_bisep)[i]))
         }
-
+        for (i in 0 until list.get(1).jumlahTahapan){
+            list[0].tahapan.add(StepWorkout(this.resources.getStringArray(R.array.gerakan_dada)[i], resources.getIdentifier(this.resources.getStringArray(R.array.gambar_dada)[i],"drawable",getPackageName()), this.resources.getStringArray(R.array.repetisi_dada)[i], this.resources.getStringArray(R.array.panduan_dada)[i]))
+        }
+        for (i in 0 until list.get(3).jumlahTahapan){
+            list[0].tahapan.add(StepWorkout(this.resources.getStringArray(R.array.gerakan_kaki)[i], resources.getIdentifier(this.resources.getStringArray(R.array.gambar_kaki)[i],"drawable",getPackageName()), this.resources.getStringArray(R.array.repetisi_kaki)[i], this.resources.getStringArray(R.array.panduan_kaki)[i]))
+        }
 
         val rvJenisLatihan: RecyclerView =  findViewById(R.id.rv_jenis_latihan)
         val listJenisLatihanAdapter = ListJenisLatihanAdapter(list)
