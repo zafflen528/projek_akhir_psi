@@ -21,14 +21,11 @@ class Panduan : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 //        overridePendingTransition(0,0)
         setContentView(R.layout.layout_panduan_gerakan)
+        val gerakan = intent.getParcelableExtra<StepWorkout>(WorkoutActivity.INTENT_PANDUAN)
 
-        val arr = arrayOf("Berdirilah di tengah-tengah pintu yang terbuka.\n" +
-                "Peganglah kedua sisi kosen pintu.\n" +
-                "Condongkan tubuh ke depan pintu dengan melangkahkan salah satu kaki kedepan hingga melewati dada dan bahu.\n" +
-                "Tahan selama 30 detik kemudian ulangi\n")
-        val tvLangkah:TextView = findViewById(R.id.tvLangkahWorkout)
-        val index = getIntent().getIntExtra("index",-1);
-        tvLangkah.setText(arr[index]);
+
+
+
 
 
 

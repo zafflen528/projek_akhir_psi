@@ -1,5 +1,6 @@
 package com.example.projek_akhir_psi
 
+import android.content.Intent
 import android.opengl.Visibility
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,6 +10,9 @@ import android.widget.ImageView
 import android.widget.TextView
 
 class WorkoutActivity : AppCompatActivity() {
+    companion object{
+        val INTENT_PANDUAN = "OBJECT_INTENT"
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_workout)
@@ -21,7 +25,9 @@ class WorkoutActivity : AppCompatActivity() {
         val btnlanjut = findViewById<Button>(R.id.btn_lanjut)
         val btnkembali = findViewById<Button>(R.id.btn_kembali)
         val buttonback = findViewById<Button>(R.id.button)
+        val btnpanduan = findViewById<Button>(R.id.btn_panduan)
         val jenislatihan = intent.getParcelableExtra<JenisLatihan>(HomePage.INTENT_PARCELABLE)
+
 
         var count = 0
         var tahap = 1
@@ -64,6 +70,12 @@ class WorkoutActivity : AppCompatActivity() {
         }
         buttonback.setOnClickListener {
             this.finish()
+        }
+
+        btnpanduan.setOnClickListener {
+            val intent = Intent(btnpanduan.context,WorkoutActivity::class.java)
+            intent.putExtra(HomePage.INTENT_PARCELABLE,jenislatihan?.tahapan?.get(count))
+            startActivity(intent)
         }
 
 
