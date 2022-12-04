@@ -1,7 +1,10 @@
 package com.example.projek_akhir_psi
 
+import android.opengl.Visibility
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.CountDownTimer
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 
@@ -15,21 +18,55 @@ class WorkoutActivity : AppCompatActivity() {
         val tvrep = findViewById<TextView>(R.id.tv_rep)
         val tvjudul = findViewById<TextView>(R.id.tv_namalatihan)
         val imgtahap = findViewById<ImageView>(R.id.imagetahap)
+        val btnlanjut = findViewById<Button>(R.id.btn_lanjut)
+        val btnkembali = findViewById<Button>(R.id.btn_kembali)
+        val buttonback = findViewById<Button>(R.id.button)
         val jenislatihan = intent.getParcelableExtra<JenisLatihan>(HomePage.INTENT_PARCELABLE)
 
-        val count = 0
-        val tahap = 1
+        var count = 0
+        var tahap = 1
         println(jenislatihan)
-        if (jenislatihan !=null){
-            tvgerakan.text = jenislatihan.tahapan?.get(count)?.namaTahap
-            tvnomor.text= tahap.toString()
-            tvrep.text=jenislatihan.tahapan?.get(count)?.repetisi
-            tvjudul.text=jenislatihan.nama
-            imgtahap.setImageResource(jenislatihan.tahapan.get(count).gambarTahapan)
+
+        fun update(){
+            if (jenislatihan !=null){
+                tvgerakan.text = jenislatihan.tahapan?.get(count)?.namaTahap
+                tvnomor.text= "${tahap.toString()}/${jenislatihan.jumlahTahapan} Gerakan"
+                tvrep.text=jenislatihan.tahapan?.get(count)?.repetisi
+                tvjudul.text=jenislatihan.nama
+                imgtahap.setImageResource(jenislatihan.tahapan.get(count).gambarTahapan)
+                btnkembali.isEnabled = count != 0
+                if (tahap==jenislatihan.jumlahTahapan){
+                    btnlanjut.text = "Selesai"
+                    btnlanjut.setOnClickListener{
+                        this.finish()
+                    }
+                }
+
+            }
         }
+        update()
+
         for (i in 0..4){
             println(jenislatihan?.tahapan?.get(i)?.namaTahap)
         }
+
+        btnkembali.setOnClickListener{
+            count--
+            tahap--
+            update()
+            btnlanjut.isEnabled=true
+        }
+        btnlanjut.setOnClickListener{
+            count++
+            tahap++
+            update()
+            btnkembali.isEnabled=true
+        }
+        buttonback.setOnClickListener {
+            this.finish()
+        }
+
+
 
     }
 }
