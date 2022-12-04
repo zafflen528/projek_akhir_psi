@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string-array name="judulartikel">
         <item>Tips Buat Kamu Untuk Menyusun Kalori Perhari</item>
         <item>Kenali Manfaat Workout Setiap Hari, Sudah Pasti Badan Bugar</item>
@@ -72,4 +73,5 @@
 
         </item>
     </string-array>
+
 </resources>

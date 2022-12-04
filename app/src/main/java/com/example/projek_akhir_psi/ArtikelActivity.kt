@@ -4,6 +4,7 @@ import android.content.res.Resources
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.Settings.Global.getString
+import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -32,5 +33,10 @@ class ArtikelActivity : AppCompatActivity() {
         val listArtikelAdapter = ListArtikelAdapter(listArtikel)
         rvArtikel.adapter = listArtikelAdapter
         rvArtikel.layoutManager = LinearLayoutManager(this)
+
+        var btnBack : Button = findViewById(R.id.btnBack)
+        btnBack.setOnClickListener {
+            this.finish()
+        }
     }
 }
