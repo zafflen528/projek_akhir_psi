@@ -11,6 +11,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.projek_akhir_psi.ArtikelActivity.Companion.INTENT_PARCELABLE
 
 class ListArtikelAdapter(private val listArtikel: ArrayList<Artikel>):
     RecyclerView.Adapter<ListArtikelAdapter.ListViewHolder>() {
@@ -25,13 +26,11 @@ class ListArtikelAdapter(private val listArtikel: ArrayList<Artikel>):
                         .into(imgArtikel)
                     tvJudul.text = artikel.judul
                 }
-//                btnBaca.setOnClickListener {
-//                    val intent = Intent(itemView.context,DetailWorkout::class.java)
-//                    intent.apply {
-//                        putExtra(DetailWorkout.EXTRA_NAME,jenis_latihan.nama)
-//                    }
-//                    itemView.context.startActivity(intent)
-//                }
+                btnBaca.setOnClickListener {
+                    val intent = Intent(btnBaca.context, ArtikelDetail::class.java)
+                    intent.putExtra(INTENT_PARCELABLE, artikel)
+                    btnBaca.context.startActivity(intent)
+                }
             }
         }
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ListViewHolder {
