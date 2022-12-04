@@ -46,15 +46,35 @@ class AddLogActivity : AppCompatActivity() {
         }
 
         fun addToList() {
-            val logOb= WorkoutLog(
-                etNamaLatihan.text.toString(),
-                etName.text.toString(),
-                Integer.parseInt(etSets.text.toString()),
-                Integer.parseInt(etReps.text.toString()),
-                etDate.text.toString()
-            )
-            WorkoutLogActivity.addLog(logOb)
-            Toast.makeText(this, "Successfully added a workout log!", Toast.LENGTH_SHORT).show()
+
+            val namaLatihan = etNamaLatihan.text.toString()
+            val namaGerakan = etName.text.toString()
+            val sets = etSets.text.toString()
+            val reps = etReps.text.toString()
+            val date = etDate.text.toString()
+
+            if(namaLatihan.equals("")){
+                Toast.makeText(this, "Nama latihan tidak boleh kosong", Toast.LENGTH_SHORT).show()
+            }else if (namaGerakan.equals("")){
+                Toast.makeText(this, "Nama nama gerakan yang dilakukan tidak boleh kosong", Toast.LENGTH_SHORT).show()
+            }else if(sets.equals("")){
+                Toast.makeText(this, "Jumlah set tidak boleh kosong", Toast.LENGTH_SHORT).show()
+            }else if (reps.equals("")){
+                Toast.makeText(this, "Jumlah repitisi tidak boleh kosong", Toast.LENGTH_SHORT).show()
+            }else if (date.equals("")){
+                Toast.makeText(this, "Tanggal latihan tidak boleh kosong", Toast.LENGTH_SHORT).show()
+            } else {
+                val logOb = WorkoutLog(
+                    etNamaLatihan.text.toString(),
+                    etName.text.toString(),
+                    Integer.parseInt(etSets.text.toString()),
+                    Integer.parseInt(etReps.text.toString()),
+                    etDate.text.toString()
+                )
+
+                WorkoutLogActivity.addLog(logOb)
+                Toast.makeText(this, "Berhasil menambahkan catatan workout", Toast.LENGTH_SHORT).show()
+            }
         }
 
         btnBack = findViewById(R.id.btnBack)
