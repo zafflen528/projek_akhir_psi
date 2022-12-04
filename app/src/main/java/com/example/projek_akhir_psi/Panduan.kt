@@ -20,24 +20,16 @@ class Panduan : AppCompatActivity() {
         val tvLangkah = findViewById<TextView>(R.id.tvLangkahWorkout)
         val tvNama= findViewById<TextView>(R.id.tvNamaWorkoutPanduanGerakan)
         val imgtahap = findViewById<ImageView>(R.id.imagePanduan)
-        val jenislatihan = intent.getParcelableExtra<JenisLatihan>(HomePage.INTENT_PARCELABLE)
+        val step = intent.getParcelableExtra<StepWorkout>(WorkoutActivity.INTENT_PANDUAN)
 
-        val index = getIntent().getIntExtra("index",-1);
-
-        if (jenislatihan !=null){
-            imgtahap.setImageResource(jenislatihan.tahapan.get(index).gambarTahapan)
-//            tvNama.text = jenislatihan.tahapan?.get(index)?.namaTahap
-            tvNama.text = index.toString()
-            tvLangkah.text = jenislatihan.tahapan?.get(index)?.panduan
+        if (step !=null){
+            imgtahap.setImageResource(step.gambarTahapan)
+            tvNama.text = step.namaTahap
+            tvLangkah.text = step.panduan
         }
 
         findViewById<Button>(R.id.btnTutupPanduan).setOnClickListener {
-//            val intent = Intent(this, WorkoutActivity::class.java)
-//            intent.putExtra("index", index)
-//            intent.putExtra(HomePage.INTENT_PARCELABLE,jenislatihan)
-//            startActivity(intent)
             finish()
         }
-//        tvLangkah.setText(arr[index]);
     }
 }

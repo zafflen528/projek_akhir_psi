@@ -1,11 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="judul1">Diet blablabla</string>
-    <string name="isi1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum erat elit, ut facilisis ipsum auctor eu. Aliquam vehicula scelerisque nulla. Quisque rutrum facilisis eros, nec placerat eros molestie sit amet. Vestibulum ac eros tempor, accumsan nunc quis, suscipit eros. Donec sit amet vehicula nulla, ac convallis est. Etiam eu ullamcorper massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc sodales, velit ut eleifend dapibus, nisl felis varius urna, non ultricies mauris nulla nec dui. Fusce semper massa ut purus tincidunt mattis. Ut tempus venenatis sapien, quis luctus nunc convallis sit amet. Vivamus non lacus tellus. In sit amet nunc interdum, ultricies elit in, efficitur turpis. In hac habitasse platea dictumst.</string>
-    <string name="judul2">Latihan blablabla</string>
-    <string name="isi2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum erat elit, ut facilisis ipsum auctor eu. Aliquam vehicula scelerisque nulla. Quisque rutrum facilisis eros, nec placerat eros molestie sit amet. Vestibulum ac eros tempor, accumsan nunc quis, suscipit eros. Donec sit amet vehicula nulla, ac convallis est. Etiam eu ullamcorper massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc sodales, velit ut eleifend dapibus, nisl felis varius urna, non ultricies mauris nulla nec dui. Fusce semper massa ut purus tincidunt mattis. Ut tempus venenatis sapien, quis luctus nunc convallis sit amet. Vivamus non lacus tellus. In sit amet nunc interdum, ultricies elit in, efficitur turpis. In hac habitasse platea dictumst.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum erat elit, ut facilisis ipsum auctor eu. Aliquam vehicula scelerisque nulla. Quisque rutrum facilisis eros, nec placerat eros molestie sit amet. Vestibulum ac eros tempor, accumsan nunc quis, suscipit eros. Donec sit amet vehicula nulla, ac convallis est. Etiam eu ullamcorper massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc sodales, velit ut eleifend dapibus, nisl felis varius urna, non ultricies mauris nulla nec dui. Fusce semper massa ut purus tincidunt mattis. Ut tempus venenatis sapien, quis luctus nunc convallis sit amet. Vivamus non lacus tellus. In sit amet nunc interdum, ultricies elit in, efficitur turpis. In hac habitasse platea dictumst.</string>
-    <string name="judul3">Diet lagi</string>
-    <string name="isi3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum erat elit, ut facilisis ipsum auctor eu. Aliquam vehicula scelerisque nulla. Quisque rutrum facilisis eros, nec placerat eros molestie sit amet. Vestibulum ac eros tempor, accumsan nunc quis, suscipit eros. Donec sit amet vehicula nulla, ac convallis est. Etiam eu ullamcorper massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc sodales, velit ut eleifend dapibus, nisl felis varius urna, non ultricies mauris nulla nec dui. Fusce semper massa ut purus tincidunt mattis. Ut tempus venenatis sapien, quis luctus nunc convallis sit amet. Vivamus non lacus tellus. In sit amet nunc interdum, ultricies elit in, efficitur turpis. In hac habitasse platea dictumst.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum erat elit, ut facilisis ipsum auctor eu. Aliquam vehicula scelerisque nulla. Quisque rutrum facilisis eros, nec placerat eros molestie sit amet. Vestibulum ac eros tempor, accumsan nunc quis, suscipit eros. Donec sit amet vehicula nulla, ac convallis est. Etiam eu ullamcorper massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc sodales, velit ut eleifend dapibus, nisl felis varius urna, non ultricies mauris nulla nec dui. Fusce semper massa ut purus tincidunt mattis. Ut tempus venenatis sapien, quis luctus nunc convallis sit amet. Vivamus non lacus tellus. In sit amet nunc interdum, ultricies elit in, efficitur turpis. In hac habitasse platea dictumst.</string>
-    <string name="judul4">L</string>
-    <string name="isi4">L</string>
+    <string-array name="judulartikel">
+        <item>Tips Buat Kamu Untuk Menyusun Kalori Perhari</item>
+        <item>Kenali Manfaat Workout Setiap Hari, Sudah Pasti Badan Bugar</item>
+        <item>Manfaat Olahraga dalam Meningkatkan Kualitas Hidup</item>
+    </string-array>
+
+    <string-array name="gbr_artikel">
+        <item>artikel1</item>
+        <item>artikel2</item>
+        <item>artikel3</item>
+    </string-array>
+
+    <string-array name="isiartikel">
+        <item>Kalori adalah jumlah energi yang didapatkan dari makanan dan minuman yang dikonsumsi. Berdasarkan penelitian dari National Health Service, rata-rata pria dewasa membutuhkan minimal 2.500 kcal per hari. Sementara, untuk wanita dewasa membutuhkan minimal 2.000 kkal per hari. Nilai ini bisa berubah tergantung pada usia dan aktivitas fisik yang dilakukan setiap orang.
+
+            \n\nDilansir dari nutrition.gov, kalori dibedakan menjadi dua jenis, yaitu kalori kecil (kal) dan kalori besar (kkal). Kalori yang dimaksud dalam makanan sebenarnya adalah kilokalori. Satu kilokalori (1 kkal) sama dengan 1000 kalori kecil (1.000 kal).
+
+            <b>Cara menghitung Kalori</b>
+
+            \n\nCara menghitung kebutuhan kalori harian setiap orang berbeda-beda. Untuk itu, mari kita menghitung kebutuhan kalori yang diperlukan dengan konsep perhitungan kalori sebagai berikut:
+            \nBBI Berat Badan Ideal = (TB – 100) – (10% dari hasil TB – 100)
+            \nTB = Tinggi badan (dalam cm)
+            \nBB = Berat badan (dalam kg)
+            \nPria = 30 kkal (standar perhitungan) x BBI
+            \nWanita = 25 kkal (standar perhitungan) x BBI
+            \nMisalnya, seorang pria memiliki tinggi badan 160 cm dan berat badan 80 kg, maka perhitungannya sebagai berikut.
+            \nBBI = (160 – 100) – (10% x (160 – 100))
+            \n= 60 - (10% x 60)
+            \n= 54
+            \nKKB = 30 kkal x 54
+            \n= 1.620 kkal
+            \n\nJadi, kebutuhan kalori untuk pria dewasa dengan tinggi 160 cm dan berat 80 kg adalah 1.890 kkal. Kalori yang cukup dan stabil akan membuat badan menjadi lebih sehat. Maka dari itu, Realfoodfam harus menerapkan pola hidup sehat dengan menjaga pola makan.
+        </item>
+        <item>
+            <b>Manfaat Jasmani dari Workout Setiap Hari</b>
+            \n\nAda dua manfaat workout apabila dikategorikan, pertama ialah manfaat jasmani, kedua yaitu manfaat kesehatan mental. Manfaat jasmani dari kebiasaan workout setiap hari ada berbagai macam, berikut ini penjelasannya.
+            \n\n1. Paru-Paru Jadi Lebih Sehat
+            \n\nWorkout setiap hari dapat berdampak pada kesehatan paru-paru menjadi lebih baik lagi, dengan berolahraga, paru-paru kamu akan mendapatkan stimulus sehingga dapat lebih optilam dan mampu mengatur nafas dengan baik, dengan kata lain kualitas paru-paru akan meningkat.
+            \n\nSemakin sering kamu berolahraga maka semakin besar kebutuhan oksigen tubuh yang kamu butuhkan. Untuk memenuhi oksigen selama berolahraga, paru-paru harus bisa menyimpan lebih banyak oksigen, maka dari itu dengan berolahraga paru-paru bisa bekerja lebih optimal dan sehat.
+            \n\n2. Mempercepat Regenerasi Tulang
+            \n\nKontraksi otot terhadap tulang dapat terjadi ketika kamu melakukan kegiatan olahraga, hal tersebut dapat membantu terjadinya proses pembentukan tulang oleh sel tulang yang baru, dengan kata lain tulang akan lebih cepat melakukan regenerasi dengan berolahraga.
+            \n\nRegenerasi tulang biasanya terjadi pada kelompok tulang aksial, yaitu tulang belakang, tulang rusuk, tengkorak dan sternum. Sedangkan regenerasi tulang pada sistem anggota tulang gerak terjadi pada tulang lengan dan paha, tulang pundak, pinggang serta pelvis.
+            \n\n3. Menjaga Berat Badan
+            \n\nWorkout setiap hari dapat menjaga berat badan. Olahraga yang diimbangi dengan jumlah asupan yang seimbang akan membuat pembakaran kalori yang lebih besar daripada asupan kalori dari makanan yang kamu konsumsi, dengan begitu tubuh akan mengalami defisit kalori.
+            \n\nDefisit kalori kemudian dapat berdampak pada penurunan berat badan. Beberapa olahraga yang efektif mengurangi berat badan diantaranya ialah kardio, senam aerobik, lari, lompat tali dan bersepeda.
+            \n\n4. Menyehatkan Jantung
+            \n\nJantung merupakan organ terpenting bagi setiap orang, meningkatnya kekuatan jantung ditandai dengan bertambahnya ukuran dan kekuatan otot ventrikel jantung sebelah kiri. Otot itu berperan memompa darah ke seluruh tubuh. Workout ternyata dapat meningkatkan kesehatan jantung.
+            \n\nOrang yang terbiasa dengan kegiatan workout setiap hari biasanya mampu rutin memompa darah hingga 100 ml dalam keadaan istirahat, hal tersebut menandakan bahwa dirinya memiliki kapasitas jantung yang meningkat atau sehat. Olahraga rutin juga dapat membuat jantung tidak berdegup terlalu kencang.
+            \n\n<b>Manfaat Kesehatan Mental dari Workout Rutin</b>
+            \n\nKebiasaan workout setiap hari bukan hanya berdampak positif terhadap fisik atau kesehatan jasmani, melainkan juga berdampak positif terhadap kesehatan mental. Berikut ini beberapa manfaat kesehatan mental yang akan kamu rasakan apabila kamu rutin berolahraga setiap hari.
+            \n\n1. Memperbaiki Suasana Hati
+            \n\nMelakukan aktivitas fisik setiap hari akan membantu kamu untuk menstimulasi otak, manfaatnya ialah otak kamu dapat melepaskan senyawa kimia tertentu. Hal tersebut dapat memberikan dampak positif, yaitu ketenangan hati, membuat tubuh lebih rileks dan mengurangi gejala stress.
+            \n\nSetiap orang tentu saja memiliki tekanan hidup, baik itu disebabkan oleh masalah pekerjaan, keluarga ataupun sekolah. Hal tersebut dapat berdampak buruk apabila kondisi hati sedang tidak baik, namun sebaliknya akan tetap baik-baik saja apabila kondisi hati tetap sedang dalam kondisi baik.
+            \n\n2. Ketenangan Otak
+            \n\nStressing merupakan tekanan mental yang diakibatkan oleh hal tertentu, misalnya seperti masalah kehidupan dan lain sebagainya. Masalah-masalah yang membuat seseorang stress dapat mempengaruhi kesehatan kinerja otak, hal tersebut dikarenakan kekacauan psikis.
+            \n\nDengan berolahraga, kamu juga dapat melakukan relaxasi, sehingga kamu akan mendapatkan ketenangan hati dan kesehatan pikiran. Ketenangan otak dapat membuatmu menjadi pribadi yang lebih bijak dalam berpikir dan cerdas dalam menilai sesuatu.
+            \n\nTernyata olahraga bukan hanya berdampak pada kesehatan fisik, melainkan juga kesehatan psikis atau mental. Sebaiknya kamu mulai rutin berolahraga setiap hari, demi mendapatkan banyak manfaat seperti menjaga berat badan dan lain sebagainya.
+
+        </item>
+        <item>
+            Membiasakan diri melakukan olahraga dengan intensitas ringan ternyata dapat mempengaruhi kualitas hidup. Tetapi pada zaman sekarang masyarakat kurang memperhatikan pentingnya berolahraga, masih banyak masyarakat yang menganggap bahwa olahrga hanya membuat tubuh lelah, sebenarnya tidak demikian.
+
+            \n\nSebuah studi baru menemukan bahwa olahraga dapat membatu anak-anak hingga orang dewasa dalam berkonsentrasi, serta meningkatkan kualitas hidup secara keseluruhan. Olahraga yang dilakukan intens dapat memicu otak melepaskan neurotransmitter yaitu hormon endorfin yang membantu menghilangkan rasa sakit serta mengurangi stres. Dan dampak yang di hasilkan membuat suasa hati dan bisa berkonsentrasi penuh dalam melakukan kegiatan sehari-hari, hal ini lah yang dapat meningkatkan kualitas hidup.
+
+            \n\nSelain itu juga olahraga bukan hanya untuk kesehatan fisik saja tetapi juga menjaga kesehatan mental. Tidak hanya endorfin saja, otak juga menstimulasi pelepasan hormon dopamin, serotonin, dan noradrenalin. Ketiganya berperan penting dalam mengatur suasana hati. Menjaga kebugaran tubuh agar dapat bekerja secara maksimal dengan memiliki suasana hati yang baik tentu saja ke inginan semua orang. Hal ini bisa kalian peroleh jika meluangkan waktu untuk berolahraga sebelum melakukan aktifitas sehari-hari.
+
+            \n\nBukan hanya orang dewasa, olahraga juga memiliki peran penting terhadap pertumbuhan anak-anak Technical University Munic melakukan studi yang mengatakan bahwa semakin tinggi tingkat kebugaran anak-anak, maka semakin baik pula mereka dapat berkonsentrasi dan memiliki kualitas hidup yang lebih tinggi. Juga peneliti lain membuktikan bahwa orang yang memiliki berat badan berlebih akan memiliki tingkat kepercayaan diri yang rendah dan hal tersebut dapat menimbulkan kesulitan dalam bersosialisasi di lingkungannya.
+
+            \n\nTentu saja tidak mudah dalam menambah aktifitas keseharian yang dilakukan. Perlu adanya kemauan yang besar dan motivasi yang kuat. Anda bisa melakukan mulai dari olahraga ringan sebelum atau sesudah melakukan aktfitas harian anda, dengan durasi awal 10-15 menit. Jika sudah terbiasa perlahan tingkatkan intensitas dan durasinya.
+
+        </item>
+    </string-array>
 </resources>
