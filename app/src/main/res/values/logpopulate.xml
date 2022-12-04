@@ -15,11 +15,11 @@
         <item>Skull Crushers</item>
     </string-array>
     <string-array name="date_array">
-        <item>Upper 1</item>
-        <item>Lower 1</item>
-        <item>Upper 2</item>
-        <item>Lower 2</item>
-        <item>Arms 1</item>
+        <item>20/08/2022</item>
+        <item>21/08/2022</item>
+        <item>23/08/2022</item>
+        <item>24/08/2022</item>
+        <item>25/08/2022</item>
     </string-array>
     <integer-array name="sets_array">
         <item>5</item>

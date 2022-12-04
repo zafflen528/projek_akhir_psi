@@ -10,6 +10,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import java.util.*
 import kotlin.collections.ArrayList
+import  io.reactivex.rxjava3.core.Observable
+import com.jakewharton.rxbinding4.widget.TextViewBeforeTextChangeEvent
 
 class WorkoutLogActivity : AppCompatActivity() {
 
@@ -75,6 +77,10 @@ class WorkoutLogActivity : AppCompatActivity() {
             }
 
         })
+    }
+
+    private fun validateForm() {
+        //reactive
     }
 
     private fun filterQuery(query : String?) {
