@@ -5,23 +5,37 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
+import io.reactivex.rxjava3.core.Observable
 import java.sql.Date
 
 class AddLogActivity : AppCompatActivity() {
 
     lateinit var btnBack : Button
+    lateinit var totalRepsTv: TextView
+    lateinit var btnTambah: Button
+    lateinit var etReps:EditText
+    lateinit var  etSets:EditText
+
+    private fun createTotalObservable(): Observable<Int> {
+        return Observable.create { emitter ->
+            btnTambah.setOnClickListener {
+//                emitter.onNext(etReps.text.toString())
+            }
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_log)
         supportActionBar?.hide()
-        val btnTambah = findViewById<Button>(R.id.btnTambah)
+        btnTambah = findViewById<Button>(R.id.btnTambah)
         val etNamaLatihan = findViewById<EditText>(R.id.etNamaLatihan)
         val etDate = findViewById<EditText>(R.id.etDate)
         val etName = findViewById<EditText>(R.id.etNamaGerakan)
-        val etReps = findViewById<EditText>(R.id.etReps)
-        val etSets = findViewById<EditText>(R.id.etSets)
+        etReps = findViewById(R.id.etReps)
+        etSets = findViewById(R.id.etSets)
 
         fun clearContents() {
             etNamaLatihan.setText("")
