@@ -28,51 +28,15 @@ class WorkoutLogActivity : AppCompatActivity() {
 
 
     private fun populate() {
-        addLog(
-            WorkoutLog(
-                getString(R.string.title1),
-                getString(R.string.exercise1),
-                resources.getInteger(R.integer.sets1),
-                resources.getInteger(R.integer.reps1),
-                getString(R.string.date1)
-            )
-        )
-        addLog(
-            WorkoutLog(
-                getString(R.string.title2),
-                getString(R.string.exercise2),
-                resources.getInteger(R.integer.sets2),
-                resources.getInteger(R.integer.reps2),
-                getString(R.string.date2)
-            )
-        )
-        addLog(
-            WorkoutLog(
-                getString(R.string.title3),
-                getString(R.string.exercise3),
-                resources.getInteger(R.integer.sets3),
-                resources.getInteger(R.integer.reps3),
-                getString(R.string.date3)
-            )
-        )
-        addLog(
-            WorkoutLog(
-                getString(R.string.title4),
-                getString(R.string.exercise4),
-                resources.getInteger(R.integer.sets4),
-                resources.getInteger(R.integer.reps4),
-                getString(R.string.date4)
-            )
-        )
-        addLog(
-            WorkoutLog(
-                getString(R.string.title5),
-                getString(R.string.exercise5),
-                resources.getInteger(R.integer.sets5),
-                resources.getInteger(R.integer.reps5),
-                getString(R.string.date5)
-            )
-        )
+        val titleArr: Array<String> = resources.getStringArray(R.array.title_array)
+        val exerciseArr: Array<String> = resources.getStringArray(R.array.exercise_array)
+        val setsArr: IntArray = resources.getIntArray(R.array.sets_array)
+        val repsArr: IntArray = resources.getIntArray(R.array.reps_array)
+        val dateArr: Array<String> = resources.getStringArray(R.array.date_array)
+        for (i in 0 .. 4) {
+            addLog(WorkoutLog(titleArr[i],exerciseArr[i],setsArr[i],repsArr[i],dateArr[i]))
+        }
+
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
