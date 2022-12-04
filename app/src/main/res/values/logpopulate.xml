@@ -1,28 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="title1">Upper 1</string>
-    <string name="exercise1">Pull Ups</string>
-    <integer name="sets1">5</integer>
-    <integer name="reps1">10</integer>
-    <string name="date1">20/08/2022</string>
-    <string name="title2">Lower 1</string>
-    <string name="exercise2">Squats</string>
-    <integer name="sets2">3</integer>
-    <integer name="reps2">10</integer>
-    <string name="date2">21/08/2022</string>
-    <string name="title3">Upper 2</string>
-    <string name="exercise3">Push Ups</string>
-    <integer name="sets3">3</integer>
-    <integer name="reps3">15</integer>
-    <string name="date3">22/08/2022</string>
-    <string name="title4">Lower 2</string>
-    <string name="exercise4">Deadlift</string>
-    <integer name="sets4">3</integer>
-    <integer name="reps4">5</integer>
-    <string name="date4">23/08/2022</string>
-    <string name="title5">Arms</string>
-    <string name="exercise5">Skull Crushers</string>
-    <integer name="sets5">4</integer>
-    <integer name="reps5">15</integer>
-    <string name="date5">24/08/2022</string>
+    <string-array name="title_array">
+        <item>Upper 1</item>
+        <item>Lower 1</item>
+        <item>Upper 2</item>
+        <item>Lower 2</item>
+        <item>Arms 1</item>
+    </string-array>
+    <string-array name="exercise_array">
+        <item>Pull Ups</item>
+        <item>Squats</item>
+        <item>Push Ups</item>
+        <item>Deadlift</item>
+        <item>Skull Crushers</item>
+    </string-array>
+    <string-array name="date_array">
+        <item>20/08/2022</item>
+        <item>21/08/2022</item>
+        <item>23/08/2022</item>
+        <item>24/08/2022</item>
+        <item>25/08/2022</item>
+    </string-array>
+    <integer-array name="sets_array">
+        <item>5</item>
+        <item>3</item>
+        <item>5</item>
+        <item>2</item>
+        <item>4</item>
+    </integer-array>
+    <integer-array name="reps_array">
+        <item>10</item>
+        <item>5</item>
+        <item>15</item>
+        <item>3</item>
+        <item>18</item>
+    </integer-array>
 </resources>

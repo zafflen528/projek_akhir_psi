@@ -1,74 +1,48 @@
 package com.example.projek_akhir_psi
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Layout
-import android.view.Gravity
-import android.view.LayoutInflater
-import android.view.View
-import android.widget.*
-import android.view.MotionEvent
-import androidx.core.graphics.drawable.DrawableCompat.inflate
-import org.w3c.dom.Text
-
+import android.service.autofill.OnClickAction
+import android.widget.Button
+import android.widget.ImageView
+import android.widget.TextView
 
 class DetailWorkout : AppCompatActivity() {
 
-    companion object {
-        const val EXTRA_NAME = "EXTRA_NAME"
+    companion object{
+        val INTENT_PARCELABLE = "OBJECT_INTENT"
     }
-
-
-    private fun goToPanduan() {
-        val tvPanduan:View = findViewById<TextView>(R.id.tvPanduanGerakan)
-        tvPanduan.setOnClickListener{
-//            val window = PopupWindow(this)
-//            val inflater = getSystemService(LAYOUT_INFLATER_SERVICE) as LayoutInflater
-//            val popupView = inflater.inflate(R.layout.layout_panduan_gerakan, null)
-//            val wid = LinearLayout.LayoutParams.WRAP_CONTENT
-//            val high = LinearLayout.LayoutParams.WRAP_CONTENT
-//            val focus= true
-//            val popupWindow = PopupWindow(popupView, wid, high, focus)
-//
-//            popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0)
-//
-//            findViewById<Button>(R.id.btnTutupPanduan).setOnTouchListener { v, event ->
-//                popupWindow.dismiss()     // It will dismiss the popup window when tapped in it
-//                true
-//            }
-
-//            val view = inflater.inflate(R.layout.layout_panduan_gerakan, null)
-//            window.contentView = view
-//            val tutup = findViewById<Button>(R.id.btnTutupPanduan)
-//            tutup.setOnClickListener {
-//                window.dismiss()
-//            }
-//            window.showAsDropDown(tvPanduan)
-
-            Toast.makeText(this,"panduan", Toast.LENGTH_SHORT)
-            val intent = Intent(this, Panduan::class.java)
-            intent.putExtra("index", 0)
-            startActivity(intent)
-        }
-    }
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_workout)
         supportActionBar?.hide()
 
-        val ind = findViewById<TextView>(R.id.tvNamaWorkout)
-        ind.text = intent.getStringExtra(EXTRA_NAME)
-        goToPanduan()
+        val namalatihan = findViewById<TextView>(R.id.tv_namalatihan)
+        val judullatihan = findViewById<TextView>(R.id.tv_judullatihan)
+        val coverlatihan = findViewById<ImageView>(R.id.cover_latihan)
+        val isilatihan = findViewById<TextView>(R.id.tv_isilatihan)
+        val buttonlatihan = findViewById<Button>(R.id.buttonlatihan)
+        val jenislatihan = intent.getParcelableExtra<JenisLatihan>(HomePage.INTENT_PARCELABLE)
 
-        //data untuk popup
+
+
+        if (jenislatihan != null) {
+            namalatihan.text = jenislatihan.nama
+            judullatihan.text = "Manfaat ${jenislatihan.nama}"
+            coverlatihan.setImageResource(jenislatihan.cover)
+            isilatihan.text = jenislatihan.manfaat
+        }
+
+
+        buttonlatihan.setOnClickListener {
+            val intent = Intent(buttonlatihan.context,WorkoutActivity::class.java)
+            intent.putExtra(HomePage.INTENT_PARCELABLE,jenislatihan)
+            startActivity(intent)
+        }
 
 
 
-//        goToPanduan(this)
     }
-
 }

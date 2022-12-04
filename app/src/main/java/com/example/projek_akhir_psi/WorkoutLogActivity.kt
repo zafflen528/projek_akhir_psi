@@ -1,8 +1,10 @@
 package com.example.projek_akhir_psi
 
+import android.content.ContentValues.TAG
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.widget.SearchView
@@ -10,6 +12,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import java.util.*
 import kotlin.collections.ArrayList
+import  io.reactivex.rxjava3.core.Observable
+import com.jakewharton.rxbinding4.widget.TextViewBeforeTextChangeEvent
+import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
+import io.reactivex.rxjava3.core.ObservableOnSubscribe
+import io.reactivex.rxjava3.core.Scheduler
+import io.reactivex.rxjava3.schedulers.Schedulers
+import java.util.concurrent.TimeUnit
 
 class WorkoutLogActivity : AppCompatActivity() {
 
@@ -28,51 +37,15 @@ class WorkoutLogActivity : AppCompatActivity() {
 
 
     private fun populate() {
-        addLog(
-            WorkoutLog(
-                getString(R.string.title1),
-                getString(R.string.exercise1),
-                resources.getInteger(R.integer.sets1),
-                resources.getInteger(R.integer.reps1),
-                getString(R.string.date1)
-            )
-        )
-        addLog(
-            WorkoutLog(
-                getString(R.string.title2),
-                getString(R.string.exercise2),
-                resources.getInteger(R.integer.sets2),
-                resources.getInteger(R.integer.reps2),
-                getString(R.string.date2)
-            )
-        )
-        addLog(
-            WorkoutLog(
-                getString(R.string.title3),
-                getString(R.string.exercise3),
-                resources.getInteger(R.integer.sets3),
-                resources.getInteger(R.integer.reps3),
-                getString(R.string.date3)
-            )
-        )
-        addLog(
-            WorkoutLog(
-                getString(R.string.title4),
-                getString(R.string.exercise4),
-                resources.getInteger(R.integer.sets4),
-                resources.getInteger(R.integer.reps4),
-                getString(R.string.date4)
-            )
-        )
-        addLog(
-            WorkoutLog(
-                getString(R.string.title5),
-                getString(R.string.exercise5),
-                resources.getInteger(R.integer.sets5),
-                resources.getInteger(R.integer.reps5),
-                getString(R.string.date5)
-            )
-        )
+        val titleArr: Array<String> = resources.getStringArray(R.array.title_array)
+        val exerciseArr: Array<String> = resources.getStringArray(R.array.exercise_array)
+        val setsArr: IntArray = resources.getIntArray(R.array.sets_array)
+        val repsArr: IntArray = resources.getIntArray(R.array.reps_array)
+        val dateArr: Array<String> = resources.getStringArray(R.array.date_array)
+        for (i in 0 .. 4) {
+            addLog(WorkoutLog(titleArr[i],exerciseArr[i],setsArr[i],repsArr[i],dateArr[i]))
+        }
+
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -100,17 +73,54 @@ class WorkoutLogActivity : AppCompatActivity() {
         rvWorkoutLog.adapter = workoutLogAdapter
         rvWorkoutLog.layoutManager = LinearLayoutManager(this)
 
-        search.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
-            override fun onQueryTextSubmit(query: String?): Boolean {
-                return false
-            }
+        Observable.create(ObservableOnSubscribe<String> { subscriber ->
+            search.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
+                override fun onQueryTextSubmit(query: String?): Boolean {
+                    subscriber.onNext(query!!)
+                    return false
+                }
 
-            override fun onQueryTextChange(newText: String?): Boolean {
-                filterQuery(newText)
-                return true
-            }
+                override fun onQueryTextChange(newText: String?): Boolean {
+                    subscriber.onNext(newText!!)
+                    return false
+                }
+
+            })
 
         })
+            .debounce(1000, TimeUnit.MILLISECONDS)
+            .distinctUntilChanged()
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe ({ text ->
+                Log.d("search", "subscriber: $text")
+                filterQuery(text)
+            },
+                {
+                    Log.e("search","Erorr : $it")
+                },
+                {
+                    Log.d("search","Complete")
+                }
+            )
+
+
+
+//        search.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
+//            override fun onQueryTextSubmit(query: String?): Boolean {
+//                return false
+//            }
+//
+//            override fun onQueryTextChange(newText: String?): Boolean {
+//                filterQuery(newText)
+//                return true
+//            }
+//
+//        })
+    }
+
+    private fun validateForm() {
+        //reactive
     }
 
     private fun filterQuery(query : String?) {

@@ -3,4 +3,6 @@
     <string name="test">test</string>
     <string name="repetisi">%d repetisi</string>
     <string name="set">%d set</string>
+    <string name="panduan"><u>Panduan Gerakan</u></string>
+
 </resources>

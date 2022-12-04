@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="isibisep">
+        Otot biseps dan triseps adalah dua otot besar yang terdapat pada lengan. Untuk membuat lengan terlihat lebih kencang dan berotot, Anda bisa melakukan beberapa gerakan untuk melatih kedua otot tersebut.
+        \n\nLengan manusia terdiri dari lengan atas (bahu hingga siku), dan lengan bawah (siku hingga pergelangan tangan). Di sepanjang lengan ini terdapat banyak otot yang memungkinkan kita untuk menggerakkan lengan dan tangan. Dua di antaranya adalah otot biseps dan triseps yang terletak di lengan atas.
+        \n\nOtot biseps berada di lengan atas bagian depan. Fungsinya untuk melakukan gerakan menarik dan merentangkan siku. Sedangkan otot triseps berada di lengan atas bagian belakang dan samping. Otot triseps berguna untuk meluruskan lengan. Selain itu, otot biseps dan triseps juga berfungsi untuk menjaga agar posisi bahu kokoh dan tegap.
+        \n\nBanyak orang yang rutin melakukan serangkaian latihan bahkan hingga menghabiskan biaya yang tidak sedikit di gym atau melakukan olahraga tertentu, seperti tolak peluru,  guna mengencangkan dan membentuk kedua otot lengan ini.Tidak hanya untuk mendapatkan bentuk lengan yang lebih indah, membangun kekuatan dan massa otot biseps dan triseps juga penting untuk mendukung kegiatan sehari-hari, misalnya agar lebih kuat membawa barang belanjaan, menggendong anak atau cucu, serta mengangkat benda yang berat.
+    </string>
+    <string name="isidada">
+        Olahraga upper body adalah salah satu cara membentuk otot dada dengan maksimal. Nggak semua olahraga bisa membantu lo dalam membentuk otot ini! Meski lo rajin olahraga sepak bola, lari, atau main badminton, belum tentu dada lo jadi terbentuk oke. Alasannya adalah karena otot dada terletak pada bagian atas tubuh. Untuk membentuknya, lo mesti latihan resistensi seperti angkat beban atau strength training menggunakan beban tubuh.
+        \n\nOtot dada terdiri dari 4 bagian yaitu pectoralis major, pectoralis minor, serratus anterior, dan subclavius.  Otot dada punya fungsi memberi tenaga tambahan untuk bagian atas tubuh seperti bahu, lengan dan tangan. Jadi, memperkuat otot dada bukan hanya untuk keperluan estetik, tapi juga kekuatan tubuh.
+    </string>
+    <string name="isikaki">
+        Latihan kaki adalah aspek penting dari rutinitas kebugaran tubuh yang seimbang. Ini karena dengan melatih kaki, kita juga membangun kekuatan, kecepatan, dan stabilitas.
+        \n\nPenting untuk konsisten dengan latihan kaki, karena otot-otot di bagian ini merupakan bagian integral dari kebugaran secara keseluruhan. Selain itu, melatih kaki juga membuat tubuh lebih mudah untuk beradaptasi dengan latihan lain, yang akan membantu mencapai tujuan kebugaran.
+        \n\nOtot kaki yang kuat juga akan menjaga keseimbangan tubuh, yang tidak mungkin didapat jika Anda hanya fokus pada tubuh bagian atas. Otot tubuh bagian bawah menciptakan fondasi yang kuat dan stabil. Mengayunkan tubuh bagian bawah ke tanah membantu menciptakan resistensi yang bergerak ke atas menuju otot inti dan tubuh bagian atas.
+        \n\nAnda menggunakan kekuatan tubuh bagian bawah untuk melakukan semua jenis gerakan, termasuk ketika menggerakkan tubuh bagian atas seperti melempar, memukul, atau meraih sesuatu.
+    </string>
+    <string-array name="gerakan_bisep">
+        <item>Chin Ups</item>
+        <item>Inverted Row</item>
+        <item>Diamond Push Ups</item>
+        <item>Bag Curl</item>
+        <item>Push Ups</item>
+    </string-array>
+    <string-array name="gambar_bisep">
+        <item>chin_ups</item>
+        <item>inverted_row</item>
+        <item>diamond_push_ups</item>
+        <item>bag_curl</item>
+        <item>push_ups</item>
+    </string-array>
+    <string-array name="repetisi_bisep">
+        <item>5 Kali</item>
+        <item>15 Kali</item>
+        <item>15 Kali</item>
+        <item>15 Kali</item>
+        <item>10 Kali</item>
+    </string-array>
+    <string-array name="panduan_bisep">
+        <item>
+            1. Cari sebuah pegangan yang cukup untuk melakukan pull up
+            2. Pegang dengan telapak tangan menghadap muka
+            3. Tegakkan dada untuk mengamankan otot sayap
+            4. Tarik ke atas dengan mendorong siku ke lantai
+            5. Setelah di atas, pelan-pelan turun ke bawah.
+            6. Ulangi gerakan sebanyak mungkin
+        </item>
+        <item>
+            1. Cari sebuah pegangan yang cukup untuk melakukan pull up
+            2. Pegang dengan telapak tangan menghadap muka
+            3. Tegakkan dada untuk mengamankan otot sayap
+            4. Tarik ke atas dengan mendorong siku ke lantai
+            5. Setelah di atas, pelan-pelan turun ke bawah.
+            6. Ulangi gerakan sebanyak mungkin
+        </item>
+        <item>
+            1. Cari sebuah pegangan yang cukup untuk melakukan pull up \n
+            2. Pegang dengan telapak tangan menghadap muka \n
+            3. Tegakkan dada untuk mengamankan otot sayap \n
+            4. Tarik ke atas dengan mendorong siku ke lantai \n
+            5. Setelah di atas, pelan-pelan turun ke bawah. \n
+            6. Ulangi gerakan sebanyak mungkin \n
+        </item>
+        <item>
+            1. Cari sebuah pegangan yang cukup untuk melakukan pull up \n
+            2. Pegang dengan telapak tangan menghadap muka \n
+            3. Tegakkan dada untuk mengamankan otot sayap \n
+            4. Tarik ke atas dengan mendorong siku ke lantai \n
+            5. Setelah di atas, pelan-pelan turun ke bawah \n
+            6. Ulangi gerakan sebanyak mungkin
+        </item>
+        <item>
+            1. Cari sebuah pegangan yang cukup untuk melakukan pull up \n
+            2. Pegang dengan telapak tangan menghadap muka \n
+            3. Tegakkan dada untuk mengamankan otot sayap \n
+            4. Tarik ke atas dengan mendorong siku ke lantai \n
+            5. Setelah di atas, pelan-pelan turun ke bawah. \n
+            6. Ulangi gerakan sebanyak mungkin \n
+        </item>
+
+    </string-array>
+</resources>
