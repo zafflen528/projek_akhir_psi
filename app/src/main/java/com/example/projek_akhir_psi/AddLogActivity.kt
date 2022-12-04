@@ -10,11 +10,12 @@ import java.sql.Date
 
 class AddLogActivity : AppCompatActivity() {
 
-
+    lateinit var btnBack : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_log)
+        supportActionBar?.hide()
         val btnTambah = findViewById<Button>(R.id.btnTambah)
         val etNamaLatihan = findViewById<EditText>(R.id.etNamaLatihan)
         val etDate = findViewById<EditText>(R.id.etDate)
@@ -42,15 +43,17 @@ class AddLogActivity : AppCompatActivity() {
             Toast.makeText(this, "Successfully added a workout log!", Toast.LENGTH_SHORT).show()
         }
 
+        btnBack = findViewById(R.id.btnBack)
+        btnBack.setOnClickListener {
+            this.finish()
+        }
+
         btnTambah.setOnClickListener {
             // ADD to list
             // Clear contents and/or
             // Go back
             addToList()
             clearContents()
-//            val intent = Intent(this, WorkoutLogActivity::class.java)
-//            finish()
-//            startActivity(intent)
         }
     }
 }
