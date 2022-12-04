@@ -9,7 +9,6 @@
         android:id="@+id/top"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/etNamaLatihan"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -51,12 +50,34 @@
         android:id="@+id/judul"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Nama latihan"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/etDate"
-        app:layout_constraintTop_toBottomOf="@+id/top"
-        tools:layout_editor_absoluteX="101dp" />
+        android:text="Tambah Catatan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:fontFamily="@font/popping_bold"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/top"
+        android:layout_marginTop="25dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/llNamaLatihan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/judul"
+        android:layout_marginTop="10dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+
+            android:fontFamily="@font/regular_poppins"
+            android:text="Nama Latihan" />
 
         <EditText
             android:id="@+id/etNamaLatihan"
@@ -81,24 +102,50 @@
         android:id="@+id/llDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Tanggal latihan"
-        android:inputType="date"
-        app:layout_constraintBottom_toTopOf="@+id/etNamaGerakan"
-        app:layout_constraintTop_toBottomOf="@+id/etNamaLatihan"
-        tools:layout_editor_absoluteX="101dp" />
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llNamaLatihan"
+        android:layout_marginTop="20dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+
+            android:fontFamily="@font/regular_poppins"
+            android:text="Nama Latihan" />
+
+        <EditText
+            android:background="@drawable/edit_text_stroke"
+            android:id="@+id/etDate"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:paddingHorizontal="20dp"
+            android:ems="10"
+            android:hint="Tanggal latihan"
+            android:fontFamily="@font/regular_poppins"
+            android:inputType="date"
+            app:layout_constraintBottom_toTopOf="@+id/etNamaGerakan"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llNamaLatihan" />
+
+    </LinearLayout>
+
 
     <LinearLayout
         android:id="@+id/llNamaGerakan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Nama Gerakan"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/etReps"
-        app:layout_constraintTop_toBottomOf="@+id/etDate"
-        tools:layout_editor_absoluteX="101dp" />
-
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llDate"
+        android:layout_marginTop="20dp"
+        >
 
         <TextView
             android:layout_width="wrap_content"
@@ -130,13 +177,17 @@
         android:id="@+id/llReps"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Jumlah Repetisi"
-        android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/etSets"
-        app:layout_constraintTop_toBottomOf="@+id/etNamaGerakan"
-        tools:layout_editor_absoluteX="101dp" />
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llNamaGerakan"
+        android:layout_marginTop="20dp"
+        >
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
 
             android:fontFamily="@font/regular_poppins"
             android:text="Nama Latihan" />
@@ -163,13 +214,54 @@
         android:id="@+id/llSets"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Jumlah Sets"
-        android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/btnTambah"
-        app:layout_constraintTop_toBottomOf="@+id/etReps"
-        tools:layout_editor_absoluteX="101dp" />
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llReps"
+        android:layout_marginTop="20dp"
+        >
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+
+            android:fontFamily="@font/regular_poppins"
+            android:text="Nama Latihan" />
+
+        <EditText
+            android:id="@+id/etSets"
+            android:background="@drawable/edit_text_stroke"
+            android:fontFamily="@font/regular_poppins"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:paddingHorizontal="20dp"
+            android:ems="10"
+            android:hint="Jumlah Sets"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/textView4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llReps" />
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/popping_bold"
+        android:text="Total repetisi: 0"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnTambah"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/llSets" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnTambah"
@@ -187,6 +279,8 @@
         android:textColor="@color/white"
         android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etSets"
-        tools:layout_editor_absoluteX="30dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 </androidx.constraintlayout.widget.ConstraintLayout>
