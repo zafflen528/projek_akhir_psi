@@ -28,7 +28,7 @@ class WorkoutLogActivity : AppCompatActivity() {
     lateinit var btnBack : Button
 
     companion object {
-        private val logList = mutableListOf<WorkoutLog>()
+        val logList = HomePage.logList
         val workoutLogAdapter = WorkoutLogAdapter(logList)
         lateinit var rvWorkoutLog: RecyclerView
         fun addLog(log:WorkoutLog) {
@@ -61,15 +61,20 @@ class WorkoutLogActivity : AppCompatActivity() {
             val intent = Intent(this, AddLogActivity::class.java)
             startActivity(intent)
         }
-        btnTambah.setOnLongClickListener {
+
+        if(logList.isEmpty()){
             populate()
-            Toast.makeText(this, "Added some workout logs!", Toast.LENGTH_LONG).show()
-            false
         }
+
+//        btnTambah.setOnLongClickListener {
+//            populate()
+//            Toast.makeText(this, "Added some workout logs!", Toast.LENGTH_LONG).show()
+//            false
+//        }
 
         btnBack = findViewById(R.id.btnBack)
         btnBack.setOnClickListener {
-            this.finish()
+            finish()
         }
 
         rvWorkoutLog.adapter = workoutLogAdapter
@@ -150,9 +155,10 @@ class WorkoutLogActivity : AppCompatActivity() {
     }
 
     override fun onDestroy() {
-        super.onDestroy()
-        filterQuery("")
         subscription.dispose()
+        super.onDestroy()
+//        filterQuery("")
+
     }
 
 
