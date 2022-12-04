@@ -7,7 +7,7 @@
         \n\nBanyak orang yang rutin melakukan serangkaian latihan bahkan hingga menghabiskan biaya yang tidak sedikit di gym atau melakukan olahraga tertentu, seperti tolak peluru,  guna mengencangkan dan membentuk kedua otot lengan ini.Tidak hanya untuk mendapatkan bentuk lengan yang lebih indah, membangun kekuatan dan massa otot biseps dan triseps juga penting untuk mendukung kegiatan sehari-hari, misalnya agar lebih kuat membawa barang belanjaan, menggendong anak atau cucu, serta mengangkat benda yang berat.
     </string>
     <string name="isidada">
-        Olahraga upper body adalah salah satu cara membentuk otot dada dengan maksimal. Nggak semua olahraga bisa membantu lo dalam membentuk otot ini! Meski lo rajin olahraga sepak bola, lari, atau main badminton, belum tentu dada lo jadi terbentuk oke. Alasannya adalah karena otot dada terletak pada bagian atas tubuh. Untuk membentuknya, lo mesti latihan resistensi seperti angkat beban atau strength training menggunakan beban tubuh.
+        Olahraga upper body adalah salah satu cara membentuk otot dada dengan maksimal. Nggak semua olahraga bisa membantu lo dalam membentuk otot ini. Meski lo rajin olahraga sepak bola, lari, atau main badminton, belum tentu dada lo jadi terbentuk oke. Alasannya adalah karena otot dada terletak pada bagian atas tubuh. Untuk membentuknya, lo mesti latihan resistensi seperti angkat beban atau strength training menggunakan beban tubuh.
         \n\nOtot dada terdiri dari 4 bagian yaitu pectoralis major, pectoralis minor, serratus anterior, dan subclavius.  Otot dada punya fungsi memberi tenaga tambahan untuk bagian atas tubuh seperti bahu, lengan dan tangan. Jadi, memperkuat otot dada bukan hanya untuk keperluan estetik, tapi juga kekuatan tubuh.
     </string>
     <string name="isikaki">
@@ -47,37 +47,154 @@
             6. Ulangi gerakan sebanyak mungkin \n
         </item>
         <item>
-            1. Cari sebuah pegangan yang cukup untuk melakukan pull up \n
-            2. Pegang dengan telapak tangan menghadap muka \n
-            3. Tegakkan dada untuk mengamankan otot sayap \n
-            4. Tarik ke atas dengan mendorong siku ke lantai \n
-            5. Setelah di atas, pelan-pelan turun ke bawah. \n
-            6. Ulangi gerakan sebanyak mungkin \n
+            1. Siapkan 2 kursi dengan tinggi yang sama dan sebuah tongkat (bisa tongkat sapu atau bambu)
+            \n2. Taruh tongkat di atas kedua kursi dan tidur di bawah tongkat.
+            \n3. Pegang tongkat dengan telapak tangan sejajar dengan telapak kaki
+            \n4. Tarik badan ke tongkat dengan cara mendorong bahu ke lantai
+            \n5. Ketika di atas turun ke bawah secara perlahan
+            \n6. Ulangi gerakan sebanyak mungkin
         </item>
         <item>
-            1. Cari sebuah pegangan yang cukup untuk melakukan pull up \n
-            2. Pegang dengan telapak tangan menghadap muka \n
-            3. Tegakkan dada untuk mengamankan otot sayap \n
-            4. Tarik ke atas dengan mendorong siku ke lantai \n
-            5. Setelah di atas, pelan-pelan turun ke bawah. \n
-            6. Ulangi gerakan sebanyak mungkin \n
-        </item>
-        <item>
-            1. Cari sebuah pegangan yang cukup untuk melakukan pull up \n
-            2. Pegang dengan telapak tangan menghadap muka \n
-            3. Tegakkan dada untuk mengamankan otot sayap \n
-            4. Tarik ke atas dengan mendorong siku ke lantai \n
-            5. Setelah di atas, pelan-pelan turun ke bawah \n
-            6. Ulangi gerakan sebanyak mungkin
-        </item>
-        <item>
-            1. Cari sebuah pegangan yang cukup untuk melakukan pull up \n
-            2. Pegang dengan telapak tangan menghadap muka \n
-            3. Tegakkan dada untuk mengamankan otot sayap \n
-            4. Tarik ke atas dengan mendorong siku ke lantai \n
-            5. Setelah di atas, pelan-pelan turun ke bawah. \n
-            6. Ulangi gerakan sebanyak mungkin \n
-        </item>
+            1. Posisikan telapak tangan dengan membentuk “wajik”.
+            \n2. Posisi ujung jari kaki menempel pada matras. Dari punggung hingga ujung kaki posisi tubuh harusnya lurus. Tahan otot perut Anda sebelum memulai gerakan push up.
+            \n3. Kemudian tekuk siku Anda dan turunkan dada ke arah matras. Jaga otot perut tetap kencang selama menurunkan tubuh ke lantai.
+            \n4. Turunkan dada Anda hingga hampir menempel pada matras, sebelum hingga menempel, dorong siku Anda kembali lurus menjauhi lantai.
+            \n5. Lakukan gerakan ini sebanyak tiga set, dengan satu set 8 kali pengulangan.
 
+        </item>
+        <item>
+            1. Siapkan sebuah tas lalu isi dengan barang hingga berat tas meningkat
+            \n2. Pegang tas pada gantungan tas dengan telapak tangan menghadap ke atas
+            \n3. Angkat telapak tangan ke bahu
+            \n4. Dengan perlahan turunkan tangan ke posisi semula
+            \n5. Ulangi gerakan sebanyak 15 kali.
+
+        </item>
+        <item>
+            1. Posisikan telapak tangan di atas lantai dengan tangan lurus. Jarak tangan kanan dan kiri sejajar di bawah bahu.
+            \n2. Posisi ujung jari kaki menempel pada matras. Dari punggung hingga ujung kaki posisi tubuh harusnya lurus. Tahan otot perut Anda sebelum memulai gerakan push up.
+            \n3. Kemudian tekuk siku Anda dan turunkan dada ke arah matras. Jaga otot perut tetap kencang selama menurunkan tubuh ke lantai.
+            \n4. Turunkan dada Anda hingga hampir menempel pada matras, sebelum hingga menempel, dorong siku Anda kembali lurus menjauhi lantai.
+            \n5. Lakukan gerakan ini sebanyak tiga set, dengan satu set 8 kali pengulangan.
+        </item>
+    </string-array>
+    <string-array name="gerakan_dada">
+        <item>Chest Stretch</item>
+        <item>Knee Push Up</item>
+        <item>Hindu Push Up</item>
+        <item>Push Up</item>
+        <item>Cobra Stretch</item>
+    </string-array>
+    <string-array name="gambar_dada">
+        <item>chest_stretch</item>
+        <item>knee_push_up</item>
+        <item>hindu_push_up</item>
+        <item>push_ups</item>
+        <item>cobra_stretch</item>
+    </string-array>
+    <string-array name="repetisi_dada">
+        <item>30 Detik</item>
+        <item>10 Kali</item>
+        <item>10 Kali</item>
+        <item>10 Kali</item>
+        <item>30 Detik</item>
+    </string-array>
+    <string-array name="panduan_dada">
+        <item>1. Berdirilah di tengah-tengah pintu yang terbuka.
+                \n2. Peganglah kedua sisi kosen pintu.
+                \n3. Condongkan tubuh ke depan pintu dengan melangkahkan salah satu kaki kedepan hingga melewati dada dan bahu.
+                \n4. Tahan selama 30 detik kemudian ulangi
+        </item>
+        <item>
+            1. Posisikan tubuh mengarah ke matras dengan kedua tangan dan lutut yang menumpu di atas matras.
+            \n2. Sejajarkan kedua tangan di bawah bahu Anda lalu luruskan. Beri jarak yang nyaman antara tangan dengan lutut.
+            \n3. Tekuk siku secara perlahan dan turunkan dada Anda ke arah matras hingga hampir menempel. Pertahankan posisi selama beberapa detik dan rasakan kontraksi pada otot inti tubuh.
+            \n4. Tarik kembali dada Anda menjauh dengan meluruskan kedua tangan. Kembali pada posisi semula.
+            \n5. Ulangi gerakan selama beberapa kali.
+
+        </item>
+        <item>
+            1. Mulailah dengan posisi papan dengan tangan sedikit lebih lebar dari lebar bahu dan kaki rapat
+            \n2. Tekan ke lantai dengan tubuh bagian atas, dan angkat pinggul ke atas dan ke belakang ke pose anjing menghadap ke bawah
+            \n3. Turunkan pinggul hingga kembali ke posisi push up sambil meremas bokong. Kemudian, terus turunkan pinggul ke lantai dan angkat dada ke depan (seolah-olah Anda mencoba menyelam ke bawah dan ke bawah palang) ke pose anjing menghadap ke atas, dengan paha terangkat dari lantai, dan jari kaki aktif.
+            \n4. Dorong kembali ke posisi awal push up. Itu satu repitisi.
+
+        </item>
+        <item>
+            1. Posisikan telapak tangan di atas lantai dengan tangan lurus. Jarak tangan kanan dan kiri sejajar di bawah bahu.
+            \n2. Posisi ujung jari kaki menempel pada matras. Dari punggung hingga ujung kaki posisi tubuh harusnya lurus. Tahan otot perut Anda sebelum memulai gerakan push up.
+            \n3. Kemudian tekuk siku Anda dan turunkan dada ke arah matras. Jaga otot perut tetap kencang selama menurunkan tubuh ke lantai.
+            \n4. Turunkan dada Anda hingga hampir menempel pada matras, sebelum hingga menempel, dorong siku Anda kembali lurus menjauhi lantai.
+            \n5. Lakukan gerakan ini sebanyak tiga set, dengan satu set 8 kali pengulangan.
+        </item>
+        <item>
+            1. Berbaringlah menelungkup di tengah lantai
+            \n2. Tekanlah lantai dengan kedua telapak tangan.
+            \n3. Tariklah bahu sedikit ke belakang dan ke bawah menjauhi telinga
+            \n4. Aktifkan otot perut dengan menarik pusar ke arah tulang punggung
+            \n5. Mulailah melakukan postur kobra yang rendah dengan menjauhkan dada dari lantai menggunakan otot punggung dan perut untuk melengkungkan punggung ke belakang
+            \n6. Bertahanlah sambil bernapas panjang 4-5 putaran napas
+            \n7. Angkat lagi dada Anda sedikit lebih tinggi sambil membuang napas
+        </item>
+    </string-array>
+    <string-array name="gerakan_kaki">
+        <item>Bodyweight Squat</item>
+        <item>Single-leg Romanian Deadlift</item>
+        <item>Lunge Pulse</item>
+        <item>Side Lunge</item>
+        <item>Calf Raise</item>
+    </string-array>
+    <string-array name="gambar_kaki">
+        <item>bodyweight_squat</item>
+        <item>single_leg_romanian_deadlift</item>
+        <item>lunge_pulse</item>
+        <item>side_lunge</item>
+        <item>calf_raise</item>
+    </string-array>
+    <string-array name="repetisi_kaki">
+        <item>15 Kali</item>
+        <item>12 Kali</item>
+        <item>15 Kali</item>
+        <item>15 Kali</item>
+        <item>15 Kali</item>
+    </string-array>
+    <string-array name="panduan_kaki">
+        <item>
+            1. Posisikan kaki selebar bahu/panggul dengan jempol kaki miring ke-luar sebanyak 15 derajat.
+            \n2. Jongkok sedalam mungkin
+            \n3. Berdiri semula
+            \n4. Ulangi gerakan sebanyak 15 kali
+
+        </item>
+        <item>
+            \n1. Posisikan kaki selebar bahu/panggul dengan jempol kaki menghadap lurus
+            \n2. Angkat kaki kiri
+            \n3. Tegakkan dada selama gerakan berlangsung
+            \n4. Dorong panggul ke belakang sedalam mungkin
+            \n5. Dorong panggul ke depan untuk mendorong badan ke atas
+            \n6. Ulangi gerakan sebanyak mungkin pada setiap sisi kaki
+
+        </item>
+        <item>
+            1. Mulailah dengan berdiri tegak dan menaruh lengan pada bagian samping tubuh Anda.
+            \n2. Langkahkan kaki kanan ke depan, lalu tekuk hingga berbentuk sudut 90 derajat. Lalu, panjangkan kaki Anda ke belakang dengan menekuk lutut.
+            \n3. Luruskan kaki kiri sehingga badan naik ke atas, selanjutnya turunkan badan hingga kaki kiri menekuk lagi.
+            \n4. Ulangi secara bergantian pada setiap sisi.
+
+        </item>
+        <item>
+            1. Berdiri tegak dengan jarak kaki selebar pinggul.
+            \n2. Ambil langkah lebar ke kiri, tekuk lutut kiri saat mendorong pinggul ke belakang. Pastikan kedua kaki tetap rata di lantai selama melakukan side lunges.
+            \n3. Dorong dengan kaki kiri untuk kembali berdiri.
+            \n4. Lakukan 10-12 lunges di sisi kiri sebelum beralih ke kanan.
+
+        </item>
+        <item>
+            1. Berdirilah dengan kaki selebar bahu, dada terbuka, dan bahu condong ke belakang.
+            \n2. Angkat kedua tumit dan seimbangkan tubuh pada bola kaki.
+            \n3. Tahan pose ini sebentar dan kemudian turunkan tumit ke lantai.
+            \n4. Ulangi ini dengan cepat untuk merasakan betis Anda terbakar dan melelehkan lemak.
+
+        </item>
     </string-array>
 </resources>

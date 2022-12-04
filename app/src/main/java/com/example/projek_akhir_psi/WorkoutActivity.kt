@@ -10,6 +10,9 @@ import android.widget.ImageView
 import android.widget.TextView
 
 class WorkoutActivity : AppCompatActivity() {
+    companion object{
+        val INTENT_PANDUAN = "OBJECT_INTENT"
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_workout)
@@ -22,7 +25,9 @@ class WorkoutActivity : AppCompatActivity() {
         val btnlanjut = findViewById<Button>(R.id.btn_lanjut)
         val btnkembali = findViewById<Button>(R.id.btn_kembali)
         val buttonback = findViewById<Button>(R.id.button)
+        val btnpanduan = findViewById<Button>(R.id.btn_panduan)
         val jenislatihan = intent.getParcelableExtra<JenisLatihan>(HomePage.INTENT_PARCELABLE)
+
 
         var count = 0
         var tahap = 1
@@ -67,6 +72,7 @@ class WorkoutActivity : AppCompatActivity() {
             this.finish()
         }
 
+
         val tvPanduan= findViewById<TextView>(R.id.btn_panduan)
         tvPanduan.setOnClickListener{
 //            Toast.makeText(this,"panduan", Toast.LENGTH_SHORT)
@@ -75,5 +81,13 @@ class WorkoutActivity : AppCompatActivity() {
             intent.putExtra(HomePage.INTENT_PARCELABLE,jenislatihan)
             startActivity(intent)
         }
+
+        btnpanduan.setOnClickListener {
+            val intent = Intent(btnpanduan.context,WorkoutActivity::class.java)
+            intent.putExtra(HomePage.INTENT_PARCELABLE,jenislatihan?.tahapan?.get(count))
+            startActivity(intent)
+        }
+
+
     }
 }
