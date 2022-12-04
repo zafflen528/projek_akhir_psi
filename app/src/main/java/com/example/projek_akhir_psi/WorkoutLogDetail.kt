@@ -2,11 +2,13 @@ package com.example.projek_akhir_psi
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import java.util.*
 
 class WorkoutLogDetail : AppCompatActivity() {
 
+    lateinit var btnBack : Button
     companion object {
         const val TITLE = "title"
         const val DATE = "date"
@@ -30,6 +32,10 @@ class WorkoutLogDetail : AppCompatActivity() {
         val tvSetsContent:TextView = findViewById(R.id.tvSetContent)
         val tvTotalContent:TextView = findViewById(R.id.tvTotalContent)
 
+        btnBack = findViewById(R.id.btnBack)
+        btnBack.setOnClickListener {
+            this.finish()
+        }
         tvTitle.text = intent.getStringExtra(TITLE)
         tvDate.text = intent.getStringExtra(DATE)
         tvNameContent.text = intent.getStringExtra(NAME)
