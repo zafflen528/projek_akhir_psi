@@ -2,6 +2,7 @@ package com.example.projek_akhir_psi
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 
@@ -21,5 +22,10 @@ class ArtikelDetail : AppCompatActivity() {
         image.setImageResource(artikel?.image!!)
         judul.text = artikel.judul
         isi.text = artikel.isi
+
+        val btnBack : Button = findViewById(R.id.btnBack)
+        btnBack.setOnClickListener {
+            this.finish()
+        }
     }
 }
