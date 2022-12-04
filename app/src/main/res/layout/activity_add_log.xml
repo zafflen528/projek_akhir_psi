@@ -86,7 +86,7 @@
             android:background="@drawable/edit_text_stroke"
 
             android:fontFamily="@font/regular_poppins"
-            android:hint="Nama latihan"
+            android:hint="Masukkan ama latihan"
             android:inputType="textPersonName"
             android:paddingHorizontal="15dp"
             app:layout_constraintBottom_toTopOf="@+id/etDate"
@@ -115,7 +115,7 @@
             android:baselineAligned="false"
 
             android:fontFamily="@font/regular_poppins"
-            android:text="Nama Latihan" />
+            android:text="Tanggal Latihan" />
 
         <EditText
             android:background="@drawable/edit_text_stroke"
@@ -124,7 +124,7 @@
             android:layout_height="45dp"
             android:paddingHorizontal="20dp"
             android:ems="10"
-            android:hint="Tanggal latihan"
+            android:hint="format dd/mm/yyyy"
             android:fontFamily="@font/regular_poppins"
             android:inputType="date"
             app:layout_constraintBottom_toTopOf="@+id/etNamaGerakan"
@@ -153,7 +153,7 @@
             android:baselineAligned="false"
 
             android:fontFamily="@font/regular_poppins"
-            android:text="Nama Latihan" />
+            android:text="Nama - nama gerakan yang dilakukan" />
 
         <EditText
             android:background="@drawable/edit_text_stroke"
@@ -163,7 +163,8 @@
             android:paddingHorizontal="20dp"
             android:fontFamily="@font/regular_poppins"
             android:ems="10"
-            android:hint="Nama Gerakan"
+            android:hint="Masukkan nama gerakan"
+
             android:inputType="textPersonName"
             app:layout_constraintBottom_toTopOf="@+id/etReps"
             app:layout_constraintEnd_toEndOf="parent"
@@ -188,9 +189,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:baselineAligned="false"
-
             android:fontFamily="@font/regular_poppins"
-            android:text="Nama Latihan" />
+            android:text="Jumlah Repitisi" />
 
         <EditText
             android:background="@drawable/edit_text_stroke"
@@ -200,7 +200,7 @@
             android:ems="10"
             android:fontFamily="@font/regular_poppins"
             android:paddingHorizontal="20dp"
-            android:hint="Jumlah Repetisi"
+            android:hint="Masukkan jumlah repetisi"
             android:inputType="number"
             app:layout_constraintBottom_toTopOf="@+id/etSets"
             app:layout_constraintEnd_toEndOf="parent"
@@ -227,7 +227,7 @@
             android:baselineAligned="false"
 
             android:fontFamily="@font/regular_poppins"
-            android:text="Nama Latihan" />
+            android:text="Jumlah Sets" />
 
         <EditText
             android:id="@+id/etSets"
@@ -237,7 +237,7 @@
             android:layout_height="45dp"
             android:paddingHorizontal="20dp"
             android:ems="10"
-            android:hint="Jumlah Sets"
+            android:hint="Masukkan jumlah sets"
             android:inputType="number"
             app:layout_constraintBottom_toTopOf="@+id/textView4"
             app:layout_constraintEnd_toEndOf="parent"
@@ -246,22 +246,6 @@
             app:layout_constraintTop_toBottomOf="@+id/llReps" />
 
     </LinearLayout>
-
-
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/popping_bold"
-        android:text="Total repetisi: 0"
-        android:textSize="22sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnTambah"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        android:visibility="invisible"
-        app:layout_constraintTop_toBottomOf="@+id/llSets" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnTambah"
@@ -282,5 +266,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@id/llSets" />
 </androidx.constraintlayout.widget.ConstraintLayout>

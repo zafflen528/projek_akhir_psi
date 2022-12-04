@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class HomePage : AppCompatActivity() {
     companion object{
+        val logList = mutableListOf<WorkoutLog>()
         val INTENT_PARCELABLE = "OBJECT_INTENT"
     }
     private fun goToLog() {

@@ -17,16 +17,18 @@ import com.jakewharton.rxbinding4.widget.TextViewBeforeTextChangeEvent
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.core.ObservableOnSubscribe
 import io.reactivex.rxjava3.core.Scheduler
+import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.schedulers.Schedulers
 import java.util.concurrent.TimeUnit
 
 class WorkoutLogActivity : AppCompatActivity() {
 
+    lateinit var subscription : CompositeDisposable
     lateinit var search : SearchView
     lateinit var btnBack : Button
 
     companion object {
-        private val logList = mutableListOf<WorkoutLog>()
+        val logList = HomePage.logList
         val workoutLogAdapter = WorkoutLogAdapter(logList)
         lateinit var rvWorkoutLog: RecyclerView
         fun addLog(log:WorkoutLog) {
@@ -59,21 +61,29 @@ class WorkoutLogActivity : AppCompatActivity() {
             val intent = Intent(this, AddLogActivity::class.java)
             startActivity(intent)
         }
-        btnTambah.setOnLongClickListener {
+
+        if(logList.isEmpty()){
             populate()
-            Toast.makeText(this, "Added some workout logs!", Toast.LENGTH_LONG).show()
-            false
         }
+
+//        btnTambah.setOnLongClickListener {
+//            populate()
+//            Toast.makeText(this, "Added some workout logs!", Toast.LENGTH_LONG).show()
+//            false
+//        }
 
         btnBack = findViewById(R.id.btnBack)
         btnBack.setOnClickListener {
-            this.finish()
+            finish()
         }
 
         rvWorkoutLog.adapter = workoutLogAdapter
         rvWorkoutLog.layoutManager = LinearLayoutManager(this)
 
-        Observable.create(ObservableOnSubscribe<String> { subscriber ->
+        subscription = CompositeDisposable()
+
+
+        val observable_search = Observable.create(ObservableOnSubscribe<String> { subscriber ->
             search.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
                 override fun onQueryTextSubmit(query: String?): Boolean {
                     subscriber.onNext(query!!)
@@ -103,6 +113,8 @@ class WorkoutLogActivity : AppCompatActivity() {
                     Log.d("search","Complete")
                 }
             )
+
+        subscription.add(observable_search)
 
 
 
@@ -139,6 +151,13 @@ class WorkoutLogActivity : AppCompatActivity() {
             }
         }
 
+
+    }
+
+    override fun onDestroy() {
+        subscription.dispose()
+        super.onDestroy()
+//        filterQuery("")
 
     }
 
