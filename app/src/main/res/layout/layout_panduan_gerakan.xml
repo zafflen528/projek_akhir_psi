@@ -7,15 +7,26 @@
     android:padding="24dp"
     tools:context=".DetailWorkout">
 
-    <androidx.constraintlayout.utils.widget.ImageFilterView
-        android:id="@+id/ivPanduanGerakan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/gambar_latihan_bisep"
-        app:layout_constraintTop_toTopOf="parent"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewPanduan"
+        android:layout_width="280dp"
+        android:layout_height="208dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="66dp"
+        app:cardCornerRadius="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        ></androidx.constraintlayout.utils.widget.ImageFilterView>
+        >
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/imagePanduan"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="centerCrop"
+            tools:srcCompat="@tools:sample/avatars"
+            />
+    </androidx.cardview.widget.CardView>
     <TextView
         android:id="@+id/tvNamaWorkoutPanduanGerakan"
         android:layout_width="wrap_content"
@@ -23,7 +34,7 @@
         android:textColor="@color/black"
         android:text="ChestStrecth"
         android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@+id/ivPanduanGerakan"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewPanduan"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         ></TextView>

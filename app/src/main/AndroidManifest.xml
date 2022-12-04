@@ -56,6 +56,13 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".Panduan"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".DetailWorkout"
             android:exported="false">
             <meta-data

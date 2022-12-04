@@ -1,5 +1,6 @@
 package com.example.projek_akhir_psi
 
+import android.content.Intent
 import android.opengl.Visibility
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -66,7 +67,13 @@ class WorkoutActivity : AppCompatActivity() {
             this.finish()
         }
 
-
-
+        val tvPanduan= findViewById<TextView>(R.id.btn_panduan)
+        tvPanduan.setOnClickListener{
+//            Toast.makeText(this,"panduan", Toast.LENGTH_SHORT)
+            val intent = Intent(this, Panduan::class.java)
+            intent.putExtra("index", count)
+            intent.putExtra(HomePage.INTENT_PARCELABLE,jenislatihan)
+            startActivity(intent)
+        }
     }
 }

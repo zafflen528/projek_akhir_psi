@@ -1,10 +1,12 @@
 package com.example.projek_akhir_psi
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.PopupWindow
@@ -12,35 +14,29 @@ import android.widget.TextView
 import org.w3c.dom.Text
 
 class Panduan : AppCompatActivity() {
-
-    private var popupNamaWorkout = ""
-    private var popupImage = ""
-    private var popupLangkah = ""
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        overridePendingTransition(0,0)
         setContentView(R.layout.layout_panduan_gerakan)
+        val tvLangkah = findViewById<TextView>(R.id.tvLangkahWorkout)
+        val tvNama= findViewById<TextView>(R.id.tvNamaWorkoutPanduanGerakan)
+        val imgtahap = findViewById<ImageView>(R.id.imagePanduan)
+        val jenislatihan = intent.getParcelableExtra<JenisLatihan>(HomePage.INTENT_PARCELABLE)
 
-        val arr = arrayOf("Berdirilah di tengah-tengah pintu yang terbuka.\n" +
-                "Peganglah kedua sisi kosen pintu.\n" +
-                "Condongkan tubuh ke depan pintu dengan melangkahkan salah satu kaki kedepan hingga melewati dada dan bahu.\n" +
-                "Tahan selama 30 detik kemudian ulangi\n")
-        val tvLangkah:TextView = findViewById(R.id.tvLangkahWorkout)
         val index = getIntent().getIntExtra("index",-1);
-        tvLangkah.setText(arr[index]);
 
+        if (jenislatihan !=null){
+            imgtahap.setImageResource(jenislatihan.tahapan.get(index).gambarTahapan)
+//            tvNama.text = jenislatihan.tahapan?.get(index)?.namaTahap
+            tvNama.text = index.toString()
+            tvLangkah.text = jenislatihan.tahapan?.get(index)?.panduan
+        }
 
-
-
-
-//        val bundle = intent.extras
-//        popupNamaWorkout = bundle?.getString("popupNamaWorkout","namaWorkout") ?: ""
-//        popupImage = bundle?.getString("popupImage","imageWorkout") ?: ""
-//        popupLangkah = bundle?.getString("popupLangkah","langkahWorkout") ?: ""
-
-//        findViewById<ImageView>(R.id.ivPanduanGerakan).
-//        findViewById<TextView>(R.id.tvNamaWorkoutPanduanGerakan).text = popupNamaWorkout
-//        findViewById<TextView>(R.id.tvLangkahWorkout).text = popupLangkah
+        findViewById<Button>(R.id.btnTutupPanduan).setOnClickListener {
+            val intent = Intent(this, WorkoutActivity::class.java)
+            intent.putExtra("index", index)
+            intent.putExtra(HomePage.INTENT_PARCELABLE,jenislatihan)
+            startActivity(intent)
+        }
+//        tvLangkah.setText(arr[index]);
     }
 }
