@@ -87,7 +87,7 @@ class AddLogActivity : AppCompatActivity() {
             // Clear contents and/or
             // Go back
             addToList()
-            clearContents()
+            recreate()
         }
     }
 }

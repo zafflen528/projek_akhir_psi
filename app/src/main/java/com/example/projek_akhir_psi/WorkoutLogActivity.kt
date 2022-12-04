@@ -28,6 +28,7 @@ class WorkoutLogActivity : AppCompatActivity() {
     lateinit var btnBack : Button
 
     companion object {
+        val INTENT_PARCELABLE = "OBJECT_INTENT"
         val logList = HomePage.logList
         val workoutLogAdapter = WorkoutLogAdapter(logList)
         lateinit var rvWorkoutLog: RecyclerView
@@ -61,6 +62,8 @@ class WorkoutLogActivity : AppCompatActivity() {
             val intent = Intent(this, AddLogActivity::class.java)
             startActivity(intent)
         }
+
+
 
         if(logList.isEmpty()){
             populate()
