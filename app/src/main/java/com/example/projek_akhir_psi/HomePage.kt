@@ -20,7 +20,6 @@ class HomePage : AppCompatActivity() {
     private fun goToArtikel() {
         val artikelBox:View = findViewById(R.id.layoutArtikel)
         artikelBox.setOnClickListener{
-            Toast.makeText(this,"artikel", Toast.LENGTH_SHORT)
             val intent = Intent(this, ArtikelActivity::class.java)
             startActivity(intent)
         }
