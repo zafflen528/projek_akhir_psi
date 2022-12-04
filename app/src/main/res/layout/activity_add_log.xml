@@ -9,6 +9,7 @@
         android:id="@+id/top"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/etNamaLatihan"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -52,10 +53,8 @@
         android:hint="Nama latihan"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/etDate"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view" />
+        app:layout_constraintTop_toBottomOf="@+id/top"
+        tools:layout_editor_absoluteX="101dp" />
 
     <EditText
         android:id="@+id/etDate"
@@ -65,10 +64,8 @@
         android:hint="Tanggal latihan"
         android:inputType="date"
         app:layout_constraintBottom_toTopOf="@+id/etNamaGerakan"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNamaLatihan" />
+        app:layout_constraintTop_toBottomOf="@+id/etNamaLatihan"
+        tools:layout_editor_absoluteX="101dp" />
 
     <EditText
         android:id="@+id/etNamaGerakan"
@@ -78,10 +75,8 @@
         android:hint="Nama Gerakan"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/etReps"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etDate" />
+        app:layout_constraintTop_toBottomOf="@+id/etDate"
+        tools:layout_editor_absoluteX="101dp" />
 
     <EditText
         android:id="@+id/etReps"
@@ -91,10 +86,8 @@
         android:hint="Jumlah Repetisi"
         android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/etSets"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNamaGerakan" />
+        app:layout_constraintTop_toBottomOf="@+id/etNamaGerakan"
+        tools:layout_editor_absoluteX="101dp" />
 
     <EditText
         android:id="@+id/etSets"
@@ -103,24 +96,9 @@
         android:ems="10"
         android:hint="Jumlah Sets"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etReps" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/popping_bold"
-        android:text="Total repetisi: 0"
-        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/btnTambah"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etSets" />
+        app:layout_constraintTop_toBottomOf="@+id/etReps"
+        tools:layout_editor_absoluteX="101dp" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnTambah"
@@ -138,8 +116,6 @@
         android:textColor="@color/white"
         android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/etSets"
+        tools:layout_editor_absoluteX="30dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
