@@ -73,18 +73,19 @@ class WorkoutActivity : AppCompatActivity() {
         }
 
 
-        val tvPanduan= findViewById<TextView>(R.id.btn_panduan)
-        tvPanduan.setOnClickListener{
-//            Toast.makeText(this,"panduan", Toast.LENGTH_SHORT)
+//        val tvPanduan= findViewById<TextView>(R.id.btn_panduan)
+//        tvPanduan.setOnClickListener{
+////            Toast.makeText(this,"panduan", Toast.LENGTH_SHORT)
+//            val intent = Intent(this, Panduan::class.java)
+//            intent.putExtra("index", count)
+//            intent.putExtra(HomePage.INTENT_PARCELABLE,jenislatihan)
+//            startActivity(intent)
+//        }
+
+        btnpanduan.setOnClickListener {
             val intent = Intent(this, Panduan::class.java)
             intent.putExtra("index", count)
             intent.putExtra(HomePage.INTENT_PARCELABLE,jenislatihan)
-            startActivity(intent)
-        }
-
-        btnpanduan.setOnClickListener {
-            val intent = Intent(btnpanduan.context,WorkoutActivity::class.java)
-            intent.putExtra(HomePage.INTENT_PARCELABLE,jenislatihan?.tahapan?.get(count))
             startActivity(intent)
         }
 

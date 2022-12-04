@@ -32,10 +32,11 @@ class Panduan : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.btnTutupPanduan).setOnClickListener {
-            val intent = Intent(this, WorkoutActivity::class.java)
-            intent.putExtra("index", index)
-            intent.putExtra(HomePage.INTENT_PARCELABLE,jenislatihan)
-            startActivity(intent)
+//            val intent = Intent(this, WorkoutActivity::class.java)
+//            intent.putExtra("index", index)
+//            intent.putExtra(HomePage.INTENT_PARCELABLE,jenislatihan)
+//            startActivity(intent)
+            finish()
         }
 //        tvLangkah.setText(arr[index]);
     }
