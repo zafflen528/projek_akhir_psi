@@ -17,11 +17,13 @@ import com.jakewharton.rxbinding4.widget.TextViewBeforeTextChangeEvent
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.core.ObservableOnSubscribe
 import io.reactivex.rxjava3.core.Scheduler
+import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.schedulers.Schedulers
 import java.util.concurrent.TimeUnit
 
 class WorkoutLogActivity : AppCompatActivity() {
 
+    lateinit var subscription : CompositeDisposable
     lateinit var search : SearchView
     lateinit var btnBack : Button
 
@@ -73,7 +75,10 @@ class WorkoutLogActivity : AppCompatActivity() {
         rvWorkoutLog.adapter = workoutLogAdapter
         rvWorkoutLog.layoutManager = LinearLayoutManager(this)
 
-        Observable.create(ObservableOnSubscribe<String> { subscriber ->
+        subscription = CompositeDisposable()
+
+
+        val observable_search = Observable.create(ObservableOnSubscribe<String> { subscriber ->
             search.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
                 override fun onQueryTextSubmit(query: String?): Boolean {
                     subscriber.onNext(query!!)
@@ -103,6 +108,8 @@ class WorkoutLogActivity : AppCompatActivity() {
                     Log.d("search","Complete")
                 }
             )
+
+        subscription.add(observable_search)
 
 
 
@@ -140,6 +147,12 @@ class WorkoutLogActivity : AppCompatActivity() {
         }
 
 
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        filterQuery("")
+        subscription.dispose()
     }
 
 
