@@ -21,6 +21,7 @@ class Panduan : AppCompatActivity() {
         val tvNama= findViewById<TextView>(R.id.tvNamaWorkoutPanduanGerakan)
         val imgtahap = findViewById<ImageView>(R.id.imagePanduan)
         val step = intent.getParcelableExtra<StepWorkout>(WorkoutActivity.INTENT_PANDUAN)
+        supportActionBar?.hide()
 
         if (step !=null){
             imgtahap.setImageResource(step.gambarTahapan)

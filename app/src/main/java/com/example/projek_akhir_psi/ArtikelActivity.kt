@@ -25,10 +25,6 @@ class ArtikelActivity : AppCompatActivity() {
             listArtikel.add(Artikel(resources.getIdentifier(this.resources.getStringArray(R.array.gbr_artikel)[i],"drawable",getPackageName()) , this.resources.getStringArray(R.array.judulartikel)[i],this.resources.getStringArray(R.array.isiartikel)[i]))
         }
 
-//        listArtikel.add(Artikel(resources.getIdentifier("artikelsatu","drawable",getPackageName()) , this.resources.getString(R.string.judul1),this.resources.getString(R.string.isi1)))
-//        listArtikel.add(Artikel(resources.getIdentifier("artikelsatu","drawable",getPackageName()) , this.resources.getString(R.string.judul2),this.resources.getString(R.string.isi2)))
-//        listArtikel.add(Artikel(resources.getIdentifier("artikelsatu","drawable",getPackageName()) , this.resources.getString(R.string.judul3),this.resources.getString(R.string.isi3)))
-
         val rvArtikel: RecyclerView =  findViewById(R.id.recyclerViewArtikel)
         val listArtikelAdapter = ListArtikelAdapter(listArtikel)
         rvArtikel.adapter = listArtikelAdapter

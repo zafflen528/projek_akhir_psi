@@ -5,9 +5,12 @@ import android.opengl.Visibility
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.provider.SyncStateContract.Helpers.update
+import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+
 
 class WorkoutActivity : AppCompatActivity() {
     companion object{
@@ -32,6 +35,9 @@ class WorkoutActivity : AppCompatActivity() {
         var tahap = 1
         println(jenislatihan)
 
+
+
+
         fun update(){
             if (jenislatihan !=null){
                 tvgerakan.text = jenislatihan.tahapan?.get(count)?.namaTahap
@@ -39,20 +45,30 @@ class WorkoutActivity : AppCompatActivity() {
                 tvrep.text=jenislatihan.tahapan?.get(count)?.repetisi
                 tvjudul.text=jenislatihan.nama
                 imgtahap.setImageResource(jenislatihan.tahapan.get(count).gambarTahapan)
-                btnkembali.isEnabled = count != 0
+                if (count == 0){
+                    btnkembali.visibility = View.GONE
+                    btnkembali.isEnabled = false
+                }else{
+                    btnkembali.visibility=View.VISIBLE
+                    btnkembali.isEnabled = true
+                }
+
                 if (tahap==jenislatihan.jumlahTahapan){
                     btnlanjut.text = "Selesai"
                     btnlanjut.setOnClickListener{
                         this.finish()
                     }
+                }else{
+                    btnlanjut.text = "Lanjut"
+                    btnlanjut.setOnClickListener {
+                        count++
+                        tahap++
+                        update()
+                        btnkembali.isEnabled=true
+                    }
                 }
 
             }
-        }
-        update()
-
-        for (i in 0..4){
-            println(jenislatihan?.tahapan?.get(i)?.namaTahap)
         }
 
         btnkembali.setOnClickListener{
@@ -61,12 +77,22 @@ class WorkoutActivity : AppCompatActivity() {
             update()
             btnlanjut.isEnabled=true
         }
+
         btnlanjut.setOnClickListener{
             count++
             tahap++
             update()
             btnkembali.isEnabled=true
         }
+
+        update()
+
+        for (i in 0..4){
+            println(jenislatihan?.tahapan?.get(i)?.namaTahap)
+        }
+
+
+
 
 
         btnpanduan.setOnClickListener {
