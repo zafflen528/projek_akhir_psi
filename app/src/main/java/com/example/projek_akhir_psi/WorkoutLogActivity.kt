@@ -23,6 +23,7 @@ import java.util.concurrent.TimeUnit
 
 class WorkoutLogActivity : AppCompatActivity() {
 
+    private val LOGS = 5
     lateinit var subscription : CompositeDisposable
     lateinit var search : SearchView
     lateinit var btnBack : Button
@@ -45,7 +46,7 @@ class WorkoutLogActivity : AppCompatActivity() {
         val setsArr: IntArray = resources.getIntArray(R.array.sets_array)
         val repsArr: IntArray = resources.getIntArray(R.array.reps_array)
         val dateArr: Array<String> = resources.getStringArray(R.array.date_array)
-        for (i in 0 .. 4) {
+        for (i in 0 until LOGS) {
             addLog(WorkoutLog(titleArr[i],exerciseArr[i],setsArr[i],repsArr[i],dateArr[i]))
         }
 
@@ -142,7 +143,7 @@ class WorkoutLogActivity : AppCompatActivity() {
         if (query != null){
             val filteredList = ArrayList<WorkoutLog>()
             for (i in logList){
-                if (i.workoutName.lowercase(Locale.ROOT).contains(query)){
+                if (i.workoutName.lowercase(Locale.ROOT).contains(query.lowercase(Locale.ROOT))){
                     filteredList.add(i)
                 }
             }
