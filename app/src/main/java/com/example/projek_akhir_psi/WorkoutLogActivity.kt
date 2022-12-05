@@ -142,7 +142,7 @@ class WorkoutLogActivity : AppCompatActivity() {
         if (query != null){
             val filteredList = ArrayList<WorkoutLog>()
             for (i in logList){
-                if (i.workoutName.lowercase(Locale.ROOT).contains(query)){
+                if (i.workoutName.lowercase(Locale.ROOT).contains(query.lowercase(Locale.ROOT))){
                     filteredList.add(i)
                 }
             }
