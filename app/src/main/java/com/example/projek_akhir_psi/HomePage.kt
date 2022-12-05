@@ -41,7 +41,7 @@ class HomePage : AppCompatActivity() {
 
         list.add(JenisLatihan(resources.getIdentifier("gambar_latihan_bisep","drawable",getPackageName()),resources.getIdentifier("cover_latihan_bisep","drawable",getPackageName()), "Latihan Bisep",this.resources.getString(R.string.isibisep), listbisep, 5))
         list.add(JenisLatihan(resources.getIdentifier("gambar_latihan_dada","drawable",getPackageName()),resources.getIdentifier("cover_latihan_dada","drawable",getPackageName()), "Latihan Dada",this.resources.getString(R.string.isidada), listdada, 5))
-        list.add(JenisLatihan(resources.getIdentifier("gambar_latihan_kaki_","drawable",getPackageName()),resources.getIdentifier("cover_latihan_kaki_","drawable",getPackageName()), "Latihan Kaki",this.resources.getString(R.string.isikaki), listkaki, 5))
+        list.add(JenisLatihan(resources.getIdentifier("gambar_latihan_kaki_","drawable",getPackageName()),resources.getIdentifier("cover_latihan_kaki","drawable",getPackageName()), "Latihan Kaki",this.resources.getString(R.string.isikaki), listkaki, 5))
         for (i in 0 until list.get(0).jumlahTahapan){
             list[0].tahapan.add(StepWorkout(this.resources.getStringArray(R.array.gerakan_bisep)[i], resources.getIdentifier(this.resources.getStringArray(R.array.gambar_bisep)[i],"drawable",getPackageName()), this.resources.getStringArray(R.array.repetisi_bisep)[i], this.resources.getStringArray(R.array.panduan_bisep)[i]))
         }
