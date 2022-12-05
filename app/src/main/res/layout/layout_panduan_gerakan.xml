@@ -1,74 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:padding="24dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     tools:context=".DetailWorkout">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardViewPanduan"
-        android:layout_width="280dp"
-        android:layout_height="208dp"
-        android:layout_marginStart="65dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="66dp"
-        app:cardCornerRadius="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        >
-
-        <pl.droidsonroids.gif.GifImageView
-            android:id="@+id/imagePanduan"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:scaleType="centerCrop"
-            tools:srcCompat="@tools:sample/avatars"
-            />
-    </androidx.cardview.widget.CardView>
-    <TextView
-        android:id="@+id/tvNamaWorkoutPanduanGerakan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:text="ChestStrecth"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@+id/cardViewPanduan"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        ></TextView>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Langkah-Langkah"
-        android:textColor="@color/orange"
-        app:layout_constraintTop_toBottomOf="@+id/tvNamaWorkoutPanduanGerakan"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        ></TextView>
-    <TextView
-        android:id="@+id/tvLangkahWorkout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Langkahnya"
-        android:layout_marginTop="24dp"
-        app:layout_constraintTop_toBottomOf="@+id/tvNamaWorkoutPanduanGerakan"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        ></TextView>
-
-    <Button
-        android:id="@+id/btnTutupPanduan"
+    <ScrollView
+        android:id="@+id/scrollView3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Tutup"
-        android:layout_marginTop="24dp"
-        app:layout_constraintTop_toBottomOf="@id/tvLangkahWorkout"
-        android:background="@drawable/rounded_orange_button"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/footer_panduan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        ></Button>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="40dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewPanduan"
+                android:layout_width="280dp"
+                android:layout_height="208dp"
+                android:layout_gravity="center_horizontal"
+                app:cardCornerRadius="24dp">
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/imagePanduan"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:scaleType="centerCrop"
+                    tools:srcCompat="@tools:sample/avatars" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvNamaWorkoutPanduanGerakan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/semi_bold_poppins"
+                android:text="ChestStrecth"
+                android:textColor="@color/black"
+                android:textSize="20dp"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/semi_bold_poppins"
+                android:text="Langkah - Langkah"
+                android:textColor="@color/orange"></TextView>
+
+            <TextView
+                android:id="@+id/tvLangkahWorkout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/regular_poppins"
+                android:padding="10dp"
+                android:text="Langkahnya"
+                android:textColor="#000000"></TextView>
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/footer_panduan"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnTutupPanduan"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/rounded_orange_button"
+            android:fontFamily="@font/semi_bold_poppins"
+            android:text="Tutup"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.AppCompatButton>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

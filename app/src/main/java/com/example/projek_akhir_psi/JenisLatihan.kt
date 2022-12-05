@@ -1,5 +1,7 @@
 package com.example.projek_akhir_psi
 
+import android.graphics.drawable.Drawable
+import android.media.Image
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
@@ -10,5 +12,6 @@ data class JenisLatihan(
     var nama: String,
     var manfaat: String,
     val tahapan : ArrayList<StepWorkout>,
-    val jumlahTahapan : Int
+    val jumlahTahapan : Int,
+
 ):Parcelable
